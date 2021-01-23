@@ -1,0 +1,4 @@
+user:
+  plainPassword:
+    length:
+      min: "Votre mot de passe doit comporter au moins {{ limit }} caractères!"
