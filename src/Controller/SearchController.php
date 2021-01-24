@@ -62,12 +62,14 @@ class SearchController extends AbstractController
         if (isset($_POST)) {
             if (!empty($_POST['id_movie'])) {
                 $type = 'movie';
+                $id = $_POST['id_movie'];
             }
             else {
                 $type = 'tv';
+                $id = $_POST['id_serie'];
             }
 
-            $tmdbDetails = (new TMDB())->getMovieById($_POST['id_movie'], $type);
+            $tmdbDetails = (new TMDB())->getMovieById($id, $type);
             $imdbDetails = '';
 
             if (isset($tmdbDetails) && !empty($tmdbDetails['imdb_id'])) {

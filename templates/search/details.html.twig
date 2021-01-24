@@ -1,21 +1,29 @@
 {% block body %}
     <ul>
+        {% if tmdbDetails.title is defined %}
+            {% set title = tmdbDetails.title %}
+            {% set originalTitle = tmdbDetails.original_title %}
+            {% set releaseDate = tmdbDetails.release_date %}
+        {% else %}
+            {% set title = tmdbDetails.name %}
+            {% set originalTitle = tmdbDetails.original_name %}
+            {% set releaseDate = tmdbDetails.first_air_date %}
+        {% endif %}
         <li>
-            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.backdrop_path }}" alt="{{ tmdbDetails.title }}">
+            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.backdrop_path }}" alt="{{ title }}">
         </li>
         <li>
-            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.poster_path }}" alt="{{ tmdbDetails.title }}">
+            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.poster_path }}" alt="{{ title }}">
         </li>
-        {% if tmdbDetails.title is not empty %}
-            <li>
-                {{ tmdbDetails.title }}
-            </li>
-        {% endif %}
-        {% if tmdbDetails.original_title is not empty %}
-            <li>
-                {{ tmdbDetails.original_title }}
-            </li>
-        {% endif %}
+        <li>
+            {{ title }}
+        </li>
+        <li>
+            {{ originalTitle }}
+        </li>
+        <li>
+            {{ releaseDate }}
+        </li>
         {% if tmdbDetails.overview is not empty %}
             <li>
                 {{ tmdbDetails.overview }}
@@ -29,11 +37,6 @@
         {% if tmdbDetails.popularity is not empty %}
             <li>
                 {{ tmdbDetails.popularity }}
-            </li>
-        {% endif %}
-        {% if tmdbDetails.release_date is not empty %}
-            <li>
-                {{ tmdbDetails.release_date }}
             </li>
         {% endif %}
         {% if tmdbDetails.vote_average is not empty %}
