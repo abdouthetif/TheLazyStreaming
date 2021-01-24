@@ -1,0 +1,64 @@
+{% block body %}
+    <ul>
+        {% if result.title is defined %}
+            <li>
+                <img src="https://image.tmdb.org/t/p/w500/{{ result.backdrop_path }}" alt="{{ result.title }}">
+            </li>
+            <li>
+                <img src="https://image.tmdb.org/t/p/w500/{{ result.poster_path }}" alt="{{ result.title }}">
+            </li>
+            <li>
+                {{ result.title }}
+            </li>
+            <li>
+                {{ result.original_title }}
+            </li>
+            <li>
+                {{ result.release_date }}
+            </li>
+        {% else %}
+            <li>
+                <img src="https://image.tmdb.org/t/p/w500/{{ result.backdrop_path }}" alt="{{ result.name }}">
+            </li>
+            <li>
+                <img src="https://image.tmdb.org/t/p/w500/{{ result.poster_path }}" alt="{{ result.name }}">
+            </li>
+            <li>
+                {{ result.name }}
+            </li>
+            <li>
+                {{ result.original_name }}
+            </li>
+            <li>
+                {{ result.first_air_date }}
+            </li>
+        {% endif %}
+        <li>
+            {{ result.overview }}
+        </li>
+        <li>
+            {{ result.original_language }}
+        </li>
+        <li>
+            {{ result.popularity }}
+        </li>
+        <li>
+            {{ result.vote_average }}
+        </li>
+    </ul>
+
+    {% if result.title is defined %}
+        <form action="{{ path('search.detailsDisplay') }}" method="post">
+            <input type="hidden" value="{{ result.id }}" name="id_movie">
+            <button type="submit">Voir</button>
+        </form>
+    {% else %}
+        <form action="{{ path('search.detailsDisplay') }}" method="post">
+            <input type="hidden" value="{{ result.id }}" name="id_serie">
+            <button type="submit">Voir</button>
+        </form>
+    {% endif %}
+
+    <a href="javascript:history.go(0)">Recharger</a>
+
+{% endblock %}

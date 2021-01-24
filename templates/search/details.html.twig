@@ -1,0 +1,84 @@
+{% block body %}
+    <ul>
+        <li>
+            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.backdrop_path }}" alt="{{ tmdbDetails.title }}">
+        </li>
+        <li>
+            <img src="https://image.tmdb.org/t/p/w500/{{ tmdbDetails.poster_path }}" alt="{{ tmdbDetails.title }}">
+        </li>
+        {% if tmdbDetails.title is not empty %}
+            <li>
+                {{ tmdbDetails.title }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.original_title is not empty %}
+            <li>
+                {{ tmdbDetails.original_title }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.overview is not empty %}
+            <li>
+                {{ tmdbDetails.overview }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.original_language is not empty %}
+            <li>
+                {{ tmdbDetails.original_language }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.popularity is not empty %}
+            <li>
+                {{ tmdbDetails.popularity }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.release_date is not empty %}
+            <li>
+                {{ tmdbDetails.release_date }}
+            </li>
+        {% endif %}
+        {% if tmdbDetails.vote_average is not empty %}
+            <li>
+                {{ tmdbDetails.vote_average }}
+            </li>
+        {% endif %}
+        {% if imdbDetails.description is defined %}
+            <li>
+                {{ imdbDetails.description }}
+            </li>
+        {% endif %}
+        {% if imdbDetails.imdb_rating is defined %}
+            <li>
+                {{ imdbDetails.imdb_rating }}
+            </li>
+        {% endif %}
+        {% if imdbDetails.youtube_trailer_key is defined %}
+            <li>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ imdbDetails.youtube_trailer_key }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {{ imdbDetails.youtube_trailer_key }}
+            </li>
+        {% endif %}
+        {% if imdbDetails.stars is defined and imdbDetails.stars is not empty %}
+            <hr>
+            <li>
+                stars :
+            </li>
+            {% for stars in imdbDetails.stars %}
+                <li>
+                    {{ stars }}
+                </li>
+            {% endfor %}
+        {% endif %}
+        {% if imdbDetails.directors is defined and imdbDetails.directors is not empty %}
+            <hr>
+            <li>
+                directors :
+            </li>
+            {% for directors in imdbDetails.directors %}
+                <li>
+                    {{ directors }}
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+    <a href="javascript:history.go(-1)">Retour à la recherche</a>
+{% endblock %}
