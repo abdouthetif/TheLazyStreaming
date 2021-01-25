@@ -1,0 +1,42 @@
+<div class="bg-yellow d-flex height">
+
+    <a class="navbar-brand w-auto mr-auto" href="#">
+        <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" width="150" alt="TheLazyStreaming logo">
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent nav-position">
+        <button class="ml-auto navbar-toggler bg-yellow" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navMobileView collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav text-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('home.index') }}">Accueil</a>
+                </li>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Espace personnel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('security.logout') }}">Deconnexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configuration</a>
+                    </li>
+
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('security.login') }}">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('user.signup') }}">Créez votre compte</a>
+                    </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('contact.index') }}">Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

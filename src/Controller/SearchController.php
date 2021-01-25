@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Form\CommentType;
 use App\Form\GetSearchType;
 use App\IMDB\IMDB;
-use App\IMDBDojo\IMDBDojo;
 use App\Repository\CommentRepository;
 use App\TMDB\TMDB;
 use Doctrine\ORM\EntityManagerInterface;
@@ -89,22 +88,6 @@ class SearchController extends AbstractController
         if (isset($tmdbDetails) && !empty($tmdbDetails['imdb_id'])) {
 
             $imdbDetails = (new IMDB())->getMovieById($tmdbDetails['imdb_id'], $type);
-            $topCasts = (new IMDBDojo())->getTopCast($tmdbDetails['imdb_id']);
-            $topCrew = (new IMDBDojo())->getTopCrew($tmdbDetails['imdb_id']);
-
-            $topCastDetails = [];
-            $directorDetails = [];
-            $writerDetails = [];
-
-            for ($i=0; $i<count($topCasts); $i++) {
-                $topCastDetails += [$i => (new IMDBDojo())->getCharnameList($topCasts[$i], $tmdbDetails['imdb_id'])];
-            }
-            for ($i=0; $i<count($topCrew['directors']); $i++) {
-                $directorDetails += [$i => (new IMDBDojo())->getCharnameList($topCrew['directors'][$i]['id'], $tmdbDetails['imdb_id'])];
-            }
-            for ($i=0; $i<count($topCrew['writers']); $i++) {
-                $writerDetails += [$i => (new IMDBDojo())->getCharnameList($topCrew['writers'][$i]['id'], $tmdbDetails['imdb_id'])];
-            }
         }
 
         if ($type == 'movie') {
@@ -129,9 +112,7 @@ class SearchController extends AbstractController
             'form' => $form->createView(),
             'type' => $type,
             'id' => $id,
-            'comments' => $comments,
-            'directorDetails' => $directorDetails,
-            'writerDetails' => $writerDetails
+            'comments' => $comments
         ]);
     }
 }

@@ -28,9 +28,17 @@
             <!-- CSS -->
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         {% endblock %}
+
+        <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
     </head>
     <body>
 
+        <!-----------------------------------------------NAV--------------------------------------------->
+        {% block nav %}
+            {{ include('inc/_nav.html.twig') }}
+        {%  endblock %}
+
+        <!-----------------------------------------------MAIN--------------------------------------------->
         <main class="container px-4">
 
             <!-- Messages flash -->
@@ -41,6 +49,12 @@
             {% block body %}{% endblock %}
         </main>
 
+        <!-------------------------------------------FOOTER ----------------------------------------->
+        <hr>
+
+        <footer>
+            <p>© 2021 TheLazyStreaming. All Rights Reserved.</p>
+        </footer>
 
         {% block javascripts %}
 
