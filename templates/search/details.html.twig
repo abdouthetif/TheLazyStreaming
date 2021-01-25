@@ -1,3 +1,5 @@
+{% extends 'base.html.twig' %}
+
 {% block body %}
     <ul>
         {% if tmdbDetails.title is defined %}
@@ -84,4 +86,35 @@
         {% endif %}
     </ul>
     <a href="javascript:history.go(-1)">Retour à la recherche</a>
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+        {{ form_start(form) }}
+
+        {{ form_widget(form.content) }}
+
+        {% if type == 'movie' %}
+            {{ form_widget(form.id_movie_tmdb, {'attr': {'value': id }}) }}
+        {% else %}
+            {{ form_widget(form.id_serie_tmdb, {'attr': {'value': id }}) }}
+        {% endif %}
+        <input type="submit" value="Envoyer" class="btn btn-primary">
+        {{ form_end(form) }}
+
+    {% else %}
+        <p>Pour poster un commentaire, <a href="{{ path('security.login') }}">
+                connectez-vous</a> ou <a href="{{ path('user.signup') }}">créez un compte</a>.</p>
+    {% endif %}
+    {% if comments is not empty %}
+        {% for comment in comments %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">Ajouté par {{ comment.user.firstname }} {{ comment.user.lastname }}
+                        le {{ comment.createdAt|date("d/m/Y", 'Europe/Paris') }}
+                        à {{ comment.createdAt|date("H:m", 'Europe/Paris') }}
+                    </h4>
+                    <p class="card-text">{{ comment.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

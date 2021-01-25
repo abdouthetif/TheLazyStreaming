@@ -1,20 +1,96 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/stylesLandingPage.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+{% endblock %}
+
+{% block title %}Bienvenue sur TheLazyStreaming{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <!-- Fonctionalites -->
+    <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="" width="200">
+    <h1>Nous sommes <span>TheLazyStreaming</span></h1>
+    <section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/TheLazyStreaming2/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/TheLazyStreaming2/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <!-- Titre -->
+        <p>
+            Vous en avez assez de passer plus de temps
+            à chercher quel film ou quelle série voir que
+            de regarder le film lui-même ? Vous êtes au
+            bon endroit, the lazy streming est un moteur
+            de recherche aléatoire de films qui vous fera
+            gagner beaucoup de temps lors de la recherche
+            d'un film ou d'une série à regarder.
+        </p>
+
+        <div class="blockButton">
+            <a href="{{ path('search.index') }}" class="btn d-inline" id="commencer">Commencer</a>
+        </div>
+    </section>
+
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+        <img src="{{ asset('assets/LandingImages/strangerThings.jpg') }}" alt="" class="gallery-cell">
+        <img src="{{ asset('assets/LandingImages/harryPotter.jpg') }}" alt="" class="gallery-cell">
+        <img src="{{ asset('assets/LandingImages/avatar.jpg') }}" alt="" class="gallery-cell">
+        <img src="{{ asset('assets/LandingImages/matrix.jpg') }}" alt="" class="gallery-cell">
+        <img src="{{ asset('assets/LandingImages/titanic.jpg') }}" alt="" class="gallery-cell">
+        <img src="{{ asset('assets/LandingImages/got.jpg') }}" alt="" class="gallery-cell">
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f6c700" viewBox="0 0 16 16"
+                 class="logosFonctions">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                <path
+                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+            </svg>
+            <p class="commentaire">Enregistrer comme vue les film que t'as deja regarde</p>
+        </div>
+
+        <div class="col">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f6c700" viewBox="0 0 16 16"
+                 class="logosFonctions">
+                <path
+                        d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+            </svg>
+            <p class="commentaire">Ajouter des films a de listes a regarder pour ne pas oublier un seul titre</p>
+        </div>
+
+        <div class="col">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f6c700" viewBox="0 0 16 16"
+                 class="logosFonctions">
+                <path fill-rule="evenodd"
+                      d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.253L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.253l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+            </svg>
+            <p class="commentaire">Ajouter a tes favoris tes film et seriespreferes</p>
+        </div>
+
+        <div class="col">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#f6c700" viewBox="0 0 16 16"
+                 class="logosFonctions">
+                <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+            </svg>
+            <p class="commentaire">Partage ton avis sur le films et series sur notre forum</p>
+        </div>
+    </div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+{% endblock %}
+

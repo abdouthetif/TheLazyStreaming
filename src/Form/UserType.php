@@ -23,25 +23,29 @@ class UserType extends AbstractType
                 'label' => 'Prénom',
                 'constraints' => [
                     new NotBlank()
-                ]
+                ],
+                'attr' => ['class' => 'titreLabel']
             ])
             ->add('lastname', TextType::class, [
                 'label' => 'Nom',
                 'constraints' => [
                     new NotBlank()
-                ]
+                ],
+                'attr' => ['class' => 'titreLabel']
             ])
             ->add('pseudo', TextType::class, [
                 'label' => 'Pseudo',
                 'constraints' => [
                     new NotBlank()
-                ]
+                ],
+                'attr' => ['class' => 'titreLabel']
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'constraints' => [
                     new NotBlank()
-                ]
+                ],
+                'attr' => ['class' => 'titreLabel']
             ])
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
@@ -56,7 +60,9 @@ class UserType extends AbstractType
                         'min' => 8,
                         'minMessage' => 'user.plainPassword.length.min'
                     ])
-                ]
+                ],
+                'attr' => ['class' => 'titreLabel'],
+                'help' => 'Ne partagez jamais votre mot de passe'
             ])
 
 

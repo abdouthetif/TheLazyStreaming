@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Movies, Series, Films, Netflix, Amazon Prime Video, HBO, Rakuten TV, Disney+" />
+  <meta name="description" content="Vous en avez assez de passer plus de temps à chercher quel film ou quelle serie voir que de regarder le film en lui-meme.Vous êtes au bon endroit, the lazy streaming est un moteur de recherche aléatoire de films qui vous fera gagner beaucop de teps lors de la recherche d'un film ou d'une serie a regarder" />
+  <meta name="subject" content="Ramdom Movies and Series">
+  <meta name="copyright" content="TheLazyStreaming">
+  <meta name="language" content="FR">
+  <meta name="TheLazyStreamingTEAM" content="TheLazyStreamingTEAM, adminl@admin.com">
+  <meta name="designer" content="Christopher Luvumbo">
+  <meta name="copyright" content="TheLazyStreaming">
+  <meta name="owner" content="TheLazyStreamingTEAM">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/Logos/TheLazyStreaming.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/stylesAdmin.css">
+
+  <!-- Titre de la page -->
+  <title>Configuration</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-----------------------------------------------MAIN--------------------------------------------->
+    <main>
+
+      <!-- Titre -->
+      <div class="titrePage">
+
+        <img src="./assets/Logos/TheLazyStreamingHorizontal.png" alt="" width="130">
+
+        <small>Veuillez compléter les champs avec les informations correspondantes</small>
+        <h1>Configurez votre compte</h1>
+        <div class="barreJaunePetit"></div>
+
+      </div>
+
+      <!-- Titre de la section Parametres du compte -->
+      <div class="titreSection">
+
+        <h3>Parametres du compte</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-tools"
+          viewBox="0 0 22 21">
+          <path
+            d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z" />
+        </svg>
+
+      </div>
+
+      <!-- Detail jaune sous le titre -->
+      <div class="barreJaune"></div>
+
+      <!-- Signup Form -->
+      <form action="">
+
+        <div>
+          <label for="nom" id="nom" name="nom" class="titreLabel">Nom</label><br>
+          <input type="text"><br>
+        </div>
+
+        <div>
+          <label for="nom" id="prenom" name="prenom" class="titreLabel">Prenom</label><br>
+          <input type="text"><br>
+        </div>
+
+        <div>
+          <label for="nom" id="pseudo" name="pseudo" class="titreLabel">Pseudo</label><br>
+          <input type="text"><br>
+        </div>
+
+        <div>
+          <label for="nom" id="email" name="email" class="titreLabel">Email</label><br>
+          <input type="email"><br>
+        </div>
+
+        <div>
+          <label for="nom" id="password1" name="password1" class="titreLabel">Mot de passe</label><br>
+          <input type="password"><br>
+          <small>Ne partagez jamais votre mot de passe</small>
+        </div>
+
+        <div>
+          <label for="nom" id="password2" name="password2" class="titreLabel">Confirmation du Mot de
+            passe</label><br>
+          <input type="password"><br>
+          <small>Ne partagez jamais votre mot de passe</small><br>
+        </div>
+
+        <div>
+          <button type="button" class="btn" id="enregistrer">Enregistrer</button>
+        </div>
+
+      </form>
+
+      <!-- Message de confirmation Du formulaire -->
+      <div class="confirmation">
+
+        <p class="messageConfirmation">Êtes-vous sûr de vouloir enregistrer les modifications?</p><br>
+
+        <div class="blockButton">
+          <button type="button" class="btn" id="acepter3">Oui, Enregistrer</button>
+        </div>
+
+      </div>
+
+      <!-- Titre de la section Suppresion du compte -->
+      <div class="titreSection">
+
+        <h3>Effacer votre compte</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-trash-fill" viewBox="0 0 22 21">
+          <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+        </svg>
+
+      </div>
+
+      <!-- Detail jaune sous le titre -->
+      <div class="barreJaune"></div>
+      
+      <!-- Message Suppresion de compte -->      
+      <div class="messageConfirmation1">
+
+        <p>Voulez-vouz supprimer votre compte TheLazyStreaming?</p><br>
+        <button type="button" class="btn" id="acepter3">Oui, Effacer</button>
+
+      </div>
+
+      <!-- Message de confirmation Suppresion -->      
+      <div class="confirmation">
+
+        <p class="messageConfirmation">Êtes-vous sûr de vouloir supprimer définitivement votre compte?</p><br>
+        <p class="messageConfirmation">Attention : cette action est irréversible</p>
+
+        <div class="blockButton">
+          <button type="button" class="btn" id="acepter2">Oui, Effacer</button>
+          <button type="button" class="btn" id="anuller2">Non, Anuller</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-------------------------------------------FOOTER ----------------------------------------->
+
+    <hr>
+
+    <footer>
+      <p>© 2021 TheLazyStreaming. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+</body>l
+
+</html>

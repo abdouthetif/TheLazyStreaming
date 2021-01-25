@@ -39,9 +39,7 @@ class UserController extends AbstractController
             return $authenticatorHandler->authenticateUserAndHandleSuccess(
                 $user, $request, $authenticator, 'main'
             );
-
         }
-
 
         return $this->render('user/signup.html.twig', [
             'form' => $form->createView()

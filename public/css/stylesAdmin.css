@@ -1,0 +1,1069 @@
+/*
+
+Classes CSS Pour le pages: Admin, Espace Personnel et Config.
+
+Toutes les proprietes sont ou peuvent etre communs atoute les pages sauf
+Les proprietes avec de () qui sont especifiques a la page qui font reference.
+
+Example: 
+Comentaires Vides (Page Admin) cet propriete est exclusive a la page 404, les proprietes
+css seront appliques a cette page uniquement.
+
+*/
+
+/*Mobile*/
+@media only screen and (max-width:1000px) {
+
+    /*General*/
+    
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    
+    * {
+        font-size: 1.1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        letter-spacing: 0.04rem;
+    }
+    
+    body {
+        background-color: #222831;
+        margin: 0;
+        padding: 0;
+    }
+    
+    section {
+        padding: 5% 0px 5% 0px;
+    }
+    
+    small {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    p {
+        display: block;
+        text-align: center;
+        margin: auto;
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    span {
+        color: #F6C700;
+    }
+    
+    
+    .lazyAdmin{
+        padding: 1.9rem;
+
+    }
+
+    /*Titre Principale*/
+
+    h1 {
+        font-family: 'Russo One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .titrePage {
+        text-align: center;
+        margin: 2rem auto 3rem;
+    }
+    
+    .titrePage small {
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    
+    /*Image Profil*/
+
+    div.imageProfile {
+    
+        width: 180px;
+        height: 180px;
+        box-sizing: content-box;
+        border-radius: 100%;
+        border: 2px solid #F6C700;
+        background-color: #000000;
+        margin: 3rem auto;
+        box-sizing: content-box;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #image {
+        width: 180px;
+        height: 180px;
+        margin: auto;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    
+    /*Titres*/
+
+    .titreSection {
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .barreJaune {
+        width: 100%;
+        margin: auto;
+        height: 3px;
+        background-color: #F6C700;
+    }
+    
+    h3 {
+        font-size: 0.9rem;
+        margin: 10px 15px 15px 0;
+    
+    }
+    
+    /*Subtitres*/
+
+    h4 {
+        font-size: 0.75rem;
+        margin: 0 0.7rem 0 0;
+        justify-content: start;
+    
+    }
+    
+    .subtitre {
+        width: 90%;
+        margin: 1.5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    
+    .ligneSubtitre {
+        width: 100%;
+        margin: auto end;
+        height: 1px;
+        background-color: #ffffff29;
+    }
+     
+    /*Film & Series*/
+   
+      .gallery-cell {
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+        background: #777777;;
+      }  
+
+      ol.flickity-page-dots{
+        display: none;
+      }
+
+    .afficheContainer {
+        background-image: url(../assets/Afiches/2670-affiche-du-film-forrest-gump.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    .afficheContainerAjouter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #F6C700;
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    .afficheContainerAjouter a svg:hover {
+        fill: #f6c900;
+    }
+    
+    
+
+    /*Button Commencer*/
+
+    #enregistrer {
+        background-color: #F6C700;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #enregistrer:hover {
+        color: #F6C700;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    /*Zones Vides*/
+
+    #section {
+        text-align: center;
+        padding: 3rem 0;
+        width: 100%;
+        margin: 2rem auto;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.049);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    /*Titre Commentaires*/
+
+    .nom {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+    }
+    
+    .email {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .date {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.25);
+    }
+    
+    .commentaire {
+        font-size: 0.7rem;
+        text-align: justify;
+    
+    }
+    
+    /*Commentaire*/
+
+    .carreBlanc {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 25px;
+        border: 1px solid white;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    .ligneCarreBlanc {
+        width: 100%;
+        height: 1px;
+        margin: 0.15rem 0 1.4rem 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    /*Voir, Editer, Supprimer*/
+
+    div.row a {
+        text-decoration: none;
+    }
+    
+    div.row a:hover {
+        color: #f6c900;
+    }
+    
+    div.col1 {
+        width: 30%
+    }
+    
+    div.col2 {
+        width: 70%;
+        text-align: end;
+    }
+    
+    div.col2 a {
+        font-size: 0.5rem;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    
+    /*Likes*/
+    .thumpsUp {
+        color: #08FF00;
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    .thumpsDown {
+        color: rgb(255, 0, 0);
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    /*Logo (Page Admin)*/
+
+    .lazyAdmin {
+        width: 100%;
+        margin: 1.5rem auto;
+        border: 1px dashed #F6C700;
+        border-radius: 15px;
+        text-align: center !important;
+    }
+
+    .lazyAdmin img {
+        width: 27%;
+        margin: auto;
+    }
+
+    /*Comentaires Vides (Page Admin)*/
+
+    #sectionCommentaire {
+        text-align: center;
+        padding: 1.3rem 0;
+    }
+
+    #sectionCommentaire p {
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    /*Formulaire (Page Config)*/
+
+    form {
+        width: 50%;
+        margin: 2.5rem auto;
+    }
+
+    form label {
+        font-size: 0.79rem;
+    }
+
+    form input {
+
+        width: 100%;
+        margin: 0.12rem auto;
+        padding: 0.4rem;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        width: 100% !important;
+        margin: auto;
+        padding: 0.2rem;
+        background-color: transparent;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    form#editerCommentaire {
+        width: 100% !important;
+        text-align: center;
+        margin: 2rem auto !important;
+    }
+
+    form div {
+        padding-bottom: 0.4rem;
+    }
+
+    form div:last-of-type {
+        text-align: center;
+        margin: 1.5rem;
+    }
+
+    form div:last-of-type button {
+        color: black;
+        background-color: #F6C700;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+    }
+
+    form div:last-of-type button:hover {
+        color: #F6C700;
+        box-shadow: 0px 0px 2px 0px #000000;
+        background-color: #000000ec;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+    }
+
+    /*Confirmation*/
+
+    .messageConfirmation {
+        font-size: 0.7rem !important;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    .messageConfirmation1 {
+        font-size: 0.7rem !important;
+        text-align: center;
+        margin: 2rem;
+        padding: 0;
+    
+    }
+    
+    .confirmation {
+        background-color: rgba(0, 0, 0, 0.049);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        align-items: center;
+        padding: 1.2rem;
+        text-align: center;
+        margin: 2.9rem 0;
+    }
+    
+    #acepter {
+        background-color: #00FF08;
+        color: black;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter:hover {
+        color: white;
+        background-color: #00ff08ce;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    
+    
+    }
+    
+    #acepter2 {
+        background-color: transparent;
+        color: white;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter2:hover {
+        color: rgb(0, 0, 0);
+        background-color: #08FF00;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    #acepter3 {
+        background-color: transparent;
+        color: white;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter3:hover {
+        color: rgb(0, 0, 0);
+        background-color: #f6c700;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    #anuller {
+        background-color: #ff0000;
+        color: black;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #anuller:hover {
+        color: white;
+        background-color: rgba(255, 0, 0, 0.849);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    
+    }
+    
+    #anuller2 {
+        background-color: transparent;
+        color: white;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #anuller2:hover {
+        color: rgb(255, 255, 255);
+        background-color: #f60000;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    .blockButton {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    
+    }
+    
+    /*Footer*/
+
+    footer p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 0.46rem;
+        padding: 3rem;
+    }
+}
+
+
+/* Tablet & Ordinateur */
+@media only screen and (min-width:1000px) {
+
+    /*General*/
+    
+    .container {
+        width: 55%;
+        margin: auto;
+    }
+    
+    * {
+        font-size: 1.1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        letter-spacing: 0.04rem;
+    }
+    
+    body {
+        background-color: #222831;
+        margin: 0;
+        padding: 0;
+    }
+    
+    section {
+        padding: 5% 0px 5% 0px;
+    }
+    
+    small {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    p {
+        display: block;
+        text-align: center;
+        margin: auto;
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    span {
+        color: #F6C700;
+    }
+    
+    
+    .lazyAdmin{
+        padding: 1.9rem;
+
+    }
+
+    /*Titre Principale*/
+
+    h1 {
+        font-family: 'Russo One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .titrePage {
+        text-align: center;
+        margin: 2rem auto 3rem;
+    }
+    
+    .titrePage small {
+        display: block;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    
+    /*Image Profil*/
+
+    div.imageProfile {
+    
+        width: 180px;
+        height: 180px;
+        box-sizing: content-box;
+        border-radius: 100%;
+        border: 2px solid #F6C700;
+        background-color: #000000;
+        margin: 3rem auto;
+        box-sizing: content-box;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #image {
+        width: 180px;
+        height: 180px;
+        margin: auto;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    
+    /*Titres*/
+
+    .titreSection {
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .barreJaune {
+        width: 100%;
+        margin: auto;
+        height: 3px;
+        background-color: #F6C700;
+    }
+    
+    h3 {
+        font-size: 0.9rem;
+        margin: 10px 15px 15px 0;
+    
+    }
+    
+    /*Subtitres*/
+
+    h4 {
+        font-size: 0.75rem;
+        margin: 0 0.7rem 0 0;
+        justify-content: start;
+    
+    }
+    
+    .subtitre {
+        width: 90%;
+        margin: 1.5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    
+    .ligneSubtitre {
+        width: 100%;
+        margin: auto end;
+        height: 1px;
+        background-color: #ffffff29;
+    }
+     
+    /*Film & Series*/
+   
+      .gallery-cell {
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+        background: #777777;;
+      }  
+
+      ol.flickity-page-dots{
+        display: none;
+      }
+
+    .afficheContainer {
+        background-image: url(../assets/Afiches/2670-affiche-du-film-forrest-gump.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    .afficheContainerAjouter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #F6C700;
+        border-radius: 15px;
+        width: 10rem;
+        height: 16rem;
+        margin: 1rem;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    .afficheContainerAjouter a svg:hover {
+        fill: #f6c900;
+    }
+    
+    
+
+    /*Button Commencer*/
+
+    #enregistrer {
+        background-color: #F6C700;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #enregistrer:hover {
+        color: #F6C700;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    /*Zones Vides*/
+
+    #section {
+        text-align: center;
+        padding: 3rem 0;
+        width: 100%;
+        margin: 2rem auto;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.049);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+    }
+    
+    /*Titre Commentaires*/
+
+    .nom {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+    }
+    
+    .email {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .date {
+        display: inline;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.25);
+    }
+    
+    .commentaire {
+        font-size: 0.7rem;
+        text-align: justify;
+    
+    }
+    
+    /*Commentaire*/
+
+    .carreBlanc {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 25px;
+        border: 1px solid white;
+        border-radius: 15px;
+        text-align: center;
+    }
+    
+    .ligneCarreBlanc {
+        width: 100%;
+        height: 1px;
+        margin: 0.15rem 0 1.4rem 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    /*Voir, Editer, Supprimer*/
+
+    div.row a {
+        text-decoration: none;
+    }
+    
+    div.row a:hover {
+        color: #f6c900;
+    }
+    
+    div.col1 {
+        width: 30%
+    }
+    
+    div.col2 {
+        width: 70%;
+        text-align: end;
+    }
+    
+    div.col2 a {
+        font-size: 0.5rem;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    
+    /*Likes*/
+    .thumpsUp {
+        color: #08FF00;
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    .thumpsDown {
+        color: rgb(255, 0, 0);
+        text-align: center;
+        font-size: 0.65rem;
+    }
+    
+    /*Logo (Page Admin)*/
+
+    .lazyAdmin {
+        width: 100%;
+        margin: 1.5rem auto;
+        border: 1px dashed #F6C700;
+        border-radius: 15px;
+        text-align: center !important;
+    }
+
+    .lazyAdmin img {
+        width: 27%;
+        margin: auto;
+    }
+
+    /*Comentaires Vides (Page Admin)*/
+
+    #sectionCommentaire {
+        text-align: center;
+        padding: 1.3rem 0;
+    }
+
+    #sectionCommentaire p {
+        width: 50%;
+        margin: 20px auto;
+    }
+
+    /*Formulaire (Page Config)*/
+
+    form {
+        width: 50%;
+        margin: 2.5rem auto;
+    }
+
+    form label {
+        font-size: 0.79rem;
+    }
+
+    form input {
+
+        width: 100%;
+        margin: 0.12rem auto;
+        padding: 0.4rem;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+
+    textarea {
+        width: 100% !important;
+        margin: auto;
+        padding: 0.2rem;
+        background-color: transparent;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    form#editerCommentaire {
+        width: 100% !important;
+        text-align: center;
+        margin: 2rem auto !important;
+    }
+
+    form div {
+        padding-bottom: 0.4rem;
+    }
+
+    form div:last-of-type {
+        text-align: center;
+        margin: 1.5rem;
+    }
+
+    form div:last-of-type button {
+        color: black;
+        background-color: #F6C700;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+    }
+
+    form div:last-of-type button:hover {
+        color: #F6C700;
+        box-shadow: 0px 0px 2px 0px #000000;
+        background-color: #000000ec;
+        padding: 0.6rem 3rem;
+        margin: 1rem;
+    }
+
+    /*Confirmation*/
+
+    .messageConfirmation {
+        font-size: 0.7rem !important;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    .messageConfirmation1 {
+        font-size: 0.7rem !important;
+        text-align: center;
+        margin: 2rem;
+        padding: 0;
+    
+    }
+    
+    .confirmation {
+        background-color: rgba(0, 0, 0, 0.049);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        align-items: center;
+        padding: 1.2rem;
+        text-align: center;
+        margin: 2.9rem 0;
+    }
+    
+    #acepter {
+        background-color: #00FF08;
+        color: black;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter:hover {
+        color: white;
+        background-color: #00ff08ce;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    
+    
+    }
+    
+    #acepter2 {
+        background-color: transparent;
+        color: white;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter2:hover {
+        color: rgb(0, 0, 0);
+        background-color: #08FF00;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    #acepter3 {
+        background-color: transparent;
+        color: white;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #acepter3:hover {
+        color: rgb(0, 0, 0);
+        background-color: #f6c700;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    #anuller {
+        background-color: #ff0000;
+        color: black;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #anuller:hover {
+        color: white;
+        background-color: rgba(255, 0, 0, 0.849);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    
+    }
+    
+    #anuller2 {
+        background-color: transparent;
+        color: white;
+        margin: 1rem;
+        padding: 0.6rem 2rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        letter-spacing: 0.07rem;
+    }
+    
+    #anuller2:hover {
+        color: rgb(255, 255, 255);
+        background-color: #f60000;
+        box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+        border-color: transparent;
+    
+    }
+    
+    .blockButton {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    
+    }
+    
+    /*Footer*/
+
+    footer p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-size: 0.46rem;
+        padding: 3rem;
+    }
+}

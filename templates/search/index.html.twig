@@ -1,17 +1,99 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SearchController!{% endblock %}
-
-{% block body %}
+{%  block stylesheets %}
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/stylesSearch.css') }}">
+{% endblock %}
+
+{% block title %}Lancez une recherche{% endblock %}
+
+{% block body %}
+
+    <!-- Title -->
+    <div class="titrePage">
+
+        <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="" width="180">
+        <div class="barreJaune"></div>
+
+    </div>
+
+    <!-- Signup Form -->
     {{ form_start(form, {'action': path('search.resultDisplay'), 'method': 'POST'}) }}
 
-    {{ form_widget(form) }}
-    <input type="submit" value="Envoyer" class="btn btn-primary">
+        <div>
+            {{ form_label(form.genre) }}
+            <small>{{ form_help(form.genre) }}</small>
+            {{ form_widget(form.genre) }}
+            {{ form_errors(form.genre) }}
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-4">
+                Type :
+            </div>
+
+            <div class="col-4">
+                {{ form_label(form.movie) }}
+                {{ form_widget(form.movie) }}
+                {{ form_errors(form.movie) }}
+            </div>
+
+            <div class="col-4">
+                {{ form_label(form.serie) }}
+                {{ form_widget(form.serie) }}
+                {{ form_errors(form.serie) }}
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            {{ form_label(form.rating) }}
+            <small>{{ form_help(form.rating) }}</small>
+            {{ form_widget(form.rating) }}
+            <datalist id="tickmarks">
+                <option value="0" label="0"></option>
+                <option value="1" label="1,0"></option>
+                <option value="2" label="2,0"></option>
+                <option value="3" label="3,0"></option>
+                <option value="4" label="4,0"></option>
+                <option value="5" label="5,0"></option>
+                <option value="6" label="6,0"></option>
+                <option value="7" label="7,0"></option>
+                <option value="8" label="8,0"></option>
+                <option value="9" label="9,0"></option>
+                <option value="10" label="10,0"></option>
+            </datalist>
+            {{ form_errors(form.rating) }}
+        </div>
+
+        <hr>
+
+        <div>
+            {{ form_label(form.year) }}
+            <small>{{ form_help(form.year) }}</small>
+            {{ form_widget(form.year) }}
+            {{ form_errors(form.year) }}
+        </div>
+
+        <div>
+            {{ form_label(form.keyword) }}
+            <small>{{ form_help(form.keyword) }}</small>
+            {{ form_widget(form.keyword) }}
+            {{ form_errors(form.keyword) }}
+        </div>
+
+        <div>
+            <button type="submit" class="btn" id="enregistrer">Lancer la recherche</button>
+        </div>
     {{ form_end(form) }}
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <!-- Login link -->
+    <a href="#">Vous n’avez pas de compte ? Inscrivez-vous c'est 100% gratuit!</a>
 
 {% endblock %}

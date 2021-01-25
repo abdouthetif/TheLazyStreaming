@@ -1,6 +1,9 @@
+{% extends 'base.html.twig' %}
+
 {% block body %}
     <ul>
         {% if result.title is defined %}
+            {% set type = 'movie' %}
             <li>
                 <img src="https://image.tmdb.org/t/p/w500/{{ result.backdrop_path }}" alt="{{ result.title }}">
             </li>
@@ -17,6 +20,7 @@
                 {{ result.release_date }}
             </li>
         {% else %}
+            {% set type = 'tv' %}
             <li>
                 <img src="https://image.tmdb.org/t/p/w500/{{ result.backdrop_path }}" alt="{{ result.name }}">
             </li>
@@ -29,9 +33,11 @@
             <li>
                 {{ result.original_name }}
             </li>
-            <li>
-                {{ result.first_air_date }}
-            </li>
+            {% if result.first_air_date is defined %}
+                <li>
+                    {{ result.first_air_date }}
+                </li>
+            {% endif %}
         {% endif %}
         <li>
             {{ result.overview }}
@@ -47,18 +53,8 @@
         </li>
     </ul>
 
-    {% if result.title is defined %}
-        <form action="{{ path('search.detailsDisplay') }}" method="post">
-            <input type="hidden" value="{{ result.id }}" name="id_movie">
-            <button type="submit">Voir</button>
-        </form>
-    {% else %}
-        <form action="{{ path('search.detailsDisplay') }}" method="post">
-            <input type="hidden" value="{{ result.id }}" name="id_serie">
-            <button type="submit">Voir</button>
-        </form>
-    {% endif %}
+    <a href="{{ path('search.detailsDisplay', {'type': type, 'id': result.id }) }}" type="button" class="btn btn-primary">Voir</a>
 
-    <a href="javascript:history.go(0)">Recharger</a>
+    <a href="javascript:history.go(0)" class="btn btn-primary">Recharger</a>
 
 {% endblock %}

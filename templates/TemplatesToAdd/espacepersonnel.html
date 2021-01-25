@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Movies, Series, Films, Netflix, Amazon Prime Video, HBO, Rakuten TV, Disney+" />
+  <meta name="description"
+    content="Vous en avez assez de passer plus de temps à chercher quel film ou quelle serie
+     voir que de regarder le film en lui-meme.Vous êtes au bon endroit, the lazy streaming est un moteur de recherche 
+     aléatoire de films qui vous fera gagner beaucop de teps lors de la recherche d'un film ou d'une serie a regarder" />
+  <meta name="subject" content="Ramdom Movies and Series">
+  <meta name="copyright" content="TheLazyStreaming">
+  <meta name="language" content="FR">
+  <meta name="TheLazyStreamingTEAM" content="TheLazyStreamingTEAM, adminl@admin.com">
+  <meta name="designer" content="Christopher Luvumbo">
+  <meta name="copyright" content="TheLazyStreaming">
+  <meta name="owner" content="TheLazyStreamingTEAM">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/Logos/TheLazyStreaming.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/stylesAdmin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+
+  <!-- Titre de la page -->
+  <title>Espace Personnel</title>
+
+</head>
+
+<body>
+
+  <!-- Container -->
+  <div class="container">
+
+    <!-----------------------------------------------MAIN--------------------------------------------->
+    <main>
+
+      <!-- Titre -->
+      <div class="titrePage">
+
+        <!-- Image -->
+        <img src="./assets/Logos/TheLazyStreamingHorizontal.png" alt="" width="130">
+
+        <!-- Text sous l'image -->
+        <small>Nous sommes ravi de te voir par ici...</small>
+        <h1>Bonjour, John Smith</h1>
+        <small>Membre depuis 03/05/2020</small>
+
+        <!-- Image de Profile -->
+        <div class="imageProfile">
+          <img src="http://via.placeholder.com/150x150" id="image" />
+          <input type="file" id="myfile" style="display:none" />
+        </div>
+
+      </div>
+
+      <!-------------------------------------------Section Films----------------------------------------->
+
+      <!-- Titre de la section Films -->
+      <div class="titreSection">
+
+        <h3>Films</h3>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-camera-reels"
+          viewBox="0 0 22 21">
+          <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+          <path
+            d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z" />
+          <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+        </svg>
+
+      </div>
+
+      <!-- Detail jaune sous le titre -->
+      <div class="barreJaune"></div>
+
+      <!-- Contenue de la section Films -->
+      <section>
+
+        <!-- Subtitre Vue -->
+        <div class="subtitre">
+
+          <h4>Vue</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" viewBox="0 0 16 16">
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la partie Vue -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="#f6c700" viewBox="0 0 16 16" class="imageSvg">
+            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            <path
+              d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Option 2 (Au moins une commentaire) -->
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+        <!--Subtitre A regarder plus tard -->
+        <div class="subtitre">
+
+          <h4>A regarder plus tard</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la partie A regarder plus tard -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+        <!--Subtitre Favoris -->
+        <div class="subtitre">
+
+          <h4>Favoris</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" class="bi bi-bookmark-star-fill"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la section Favoris -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-------------------------------------------Section Series----------------------------------------->
+
+      <!-- Titre de la section Series -->
+      <div class="titreSection">
+
+        <h3>Series</h3>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-camera-reels"
+          viewBox="0 0 22 21">
+          <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
+          <path
+            d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z" />
+          <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+        </svg>
+
+      </div>
+
+      <!-- Detail jaune sous le titre -->
+      <div class="barreJaune"></div>
+
+      <!-- Contenue de la section Series -->
+      <section>
+
+        <!-- Subtitre Vue -->
+        <div class="subtitre">
+
+          <h4>Vue</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" viewBox="0 0 16 16">
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la partie Vue -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="#f6c700" viewBox="0 0 16 16" class="imageSvg">
+            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            <path
+              d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+        <!--Subtitre A regarder plus tard -->
+        <div class="subtitre">
+
+          <h4>A regarder plus tard</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la partie A regarder plus tard -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+        <!--Subtitre Favoris -->
+        <div class="subtitre">
+
+          <h4>Favoris</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#f6c700" class="bi bi-bookmark-star-fill"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+          </svg>
+          <div class="ligneSubtitre"></div>
+
+        </div>
+
+        <!-- Contenue de la section Favoris -->
+
+        <!-- Option 1  (Pas de Commentaires) -->
+        <section id="sectionCommentaire">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" fill="#f6c700" viewBox="0 0 16 16">
+            <path
+              d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A1.993 1.993 0 0 0 8 6c-.532 0-1.016.208-1.375.547zM14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
+          </svg>
+          <p class="messageConfirmation">Rien a voir par ici.. <br> Lancez une recherche</p>
+          <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+        </section>
+
+        <!-- Carroussel -->
+        <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+          <div class="afficheContainerAjouter">
+
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" fill="rgba(0, 0, 0, 0.45)"
+                class="bi bi-cloud-plus-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm.5 4v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z" />
+              </svg>
+            </a>
+
+          </div>
+
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-terminal-583.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-faut-sauver-soldat-ryan-432.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-pulp-fiction-67842.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-secondes-chrono.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+          <div>
+            <a href=""><img src="./assets/Afiches/affiche-film-cloud-atlas-2464.jpg" alt="" srcset=""
+                class="gallery-cell"></a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-------------------------------------------Section Commentaires----------------------------------------->
+
+      <!-- Titre de la section commenataires -->
+      <div class="titreSection">
+
+        <h3>Commentaires</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700" class="bi bi-chat-left-text-fill"
+          viewBox="0 0 22 21">
+          <path
+            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+        </svg>
+
+      </div>
+
+      <!-- Detail jaune sous le titre -->
+      <div class="barreJaune"></div>
+
+      <!-- Contenue de la section commentaires -->
+      <section id="sectionCommentaire">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="85" fill="#f6c700" class="bi bi-ui-checks" viewBox="0 0 16 16">
+          <path
+            d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708l-2 2zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708l-2 2zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <p class="messageConfirmation">Aucun commentaire par ici.. <br> Lancez une recherche</p>
+        <button type="button" class="btn" id="enregistrer">Commencer</button>
+
+      </section>
+
+      <!-- Commenatire John Smith -->
+
+      <!-- Titre du commentaire -->
+      <div class="titreCommentaire">
+        <p class="nom">John Smith</p>
+        <p class="email">JohnSmith@gmail.com</p>
+        <p class="date">08/10/2020 13:46:20</p>
+      </div>
+
+      <div class="ligneCarreBlanc"></div>
+
+      <!-- Contenue du commentaire -->
+      <div class="carreBlanc">
+        <p class="commentaire">
+          E.T l’extraterrestre n’en demeure pas moins bienveillant ;
+          son message de paix et de tolérance est transmis avec une
+          telle grâce qu’il saura toucher le cœur des plus cyniques.
+          A la maestria du réalisateur de Jurassic Park vient s’ajouter
+          celle de son ami et éternel collaborateur John Williams, qui
+          a composé, à quelques exceptions près, toutes les bandes
+          originales des films de Spielberg.
+        </p>
+      </div>
+
+      <!-- Options commentaires-->
+      <div class="row">
+
+        <!-- Likes -->
+        <div class="col1">
+
+          <!-- Thumps up -->
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#08FF00" class="bi bi-hand-thumbs-up"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+            </svg>
+          </a>
+          <small class="thumpsUp"> 4 </small>
+
+          <!-- Thumps down -->
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FF0000" class="bi bi-hand-thumbs-down"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964l-.261.065zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1z" />
+            </svg>
+          </a>
+          <small class="thumpsDown">0</small>
+        </div>
+
+        <!-- Voir, Editer, Supprimer -->
+        <div class="col2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-eye-fill"
+            viewBox="0 0 16 16">
+            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+          </svg>
+          <a href="">Voir</a>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-pencil-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+          </svg>
+          <a href="">Editer</a>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-trash-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+          </svg>
+          <a href="">Supprimer</a>
+        </div>
+
+      </div>
+
+      <form id="editerCommentaire">
+
+      <textarea id="message" type="text" placeholder="
+            E.T l’extraterrestre n’en demeure pas moins bienveillant ;
+            son message de paix et de tolérance est transmis avec une
+            telle grâce qu’il saura toucher le cœur des plus cyniques.
+            A la maestria du réalisateur de Jurassic Park vient s’ajouter
+            celle de son ami et éternel collaborateur John Williams, qui
+            a composé, à quelques exceptions près, toutes les bandes
+            originales des films de Spielberg." rows="10">
+      </textarea>
+
+      <div>
+        <button type="submit" class="btn" id="enregistrer">Enregistrer</button>
+      </div>
+    </form>
+
+ 
+
+      <!-- Messsages de confirmation -->
+
+      <!-- Message de confirmation Edition -->
+      <div class="confirmation">
+
+        <p class="messageConfirmation">Enregistrer les modifications ?</p><br>
+
+        <div class="blockButton">
+          <button type="button" class="btn" id="acepter2">Oui, Enregistrer</button>
+          <button type="button" class="btn" id="anuller2">Non, Anuller</button>
+        </div>
+
+      </div>
+
+      <!-- Message de confirmation Edition Definitif-->
+      <div class="confirmation">
+
+        <p class="messageConfirmation">Êtes-vous sûr de vouloir enregistrer les modifications?</p><br>
+
+        <div class="blockButton">
+          <button type="button" class="btn" id="acepter3">Oui, Enregistrer</button>
+        </div>
+
+      </div>
+
+      <!-- Message de confirmation Suppresion -->
+      <div class="confirmation">
+
+        <p class="messageConfirmation">Êtes-vous sûr de vouloir supprimer définitivement cette commentaire?</p><br>
+        <p class="messageConfirmation">Attention : Cette action est irréversible</p>
+
+        <div class="blockButton">
+          <button type="button" class="btn" id="acepter2">Oui, Effacer</button>
+          <button type="button" class="btn" id="anuller2">Non, Anuller</button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-------------------------------------------FOOTER ----------------------------------------->
+
+    <hr>
+
+    <footer>
+      <p>© 2021 TheLazyStreaming. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/espacepersonnel.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
