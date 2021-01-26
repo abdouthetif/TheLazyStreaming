@@ -405,6 +405,10 @@ css seront appliques a cette page uniquement.
 
     /*Confirmation*/
 
+    .modal-content {
+        background-color: #393e46 !important;
+    }
+
     .messageConfirmation {
         font-size: 0.7rem !important;
         text-align: center;
@@ -933,6 +937,10 @@ css seront appliques a cette page uniquement.
     }
 
     /*Confirmation*/
+
+    .modal-content {
+        background-color: #393e46 !important;
+    }
 
     .messageConfirmation {
         font-size: 0.7rem !important;

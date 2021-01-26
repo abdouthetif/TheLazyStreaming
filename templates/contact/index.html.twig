@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez-nous{% endblock %}
+
+{% block body %}
+
+    <!-- Title -->
+    <div class="titrePage">
+
+        <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" alt="TheLazytStreaming Logo" width="130">
+
+        <small>Veuillez compléter les champs avec les informations correspondantes</small>
+        <h1>Nous contacter</h1>
+        <div class="barreJaune"></div>
+    </div>
+
+    <!-- Contact Form -->
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div>
+        <div>
+            <button type="submit" class="btn" id="enregistrer">Envoyer</button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}

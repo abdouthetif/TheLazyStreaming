@@ -44,6 +44,11 @@ class Comment
     private $id_serie_tmdb;
 
     /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_valid;
+
+    /**
      * Comment constructor.
      */
     public function __construct()
@@ -112,6 +117,18 @@ class Comment
     public function setIdSerieTmdb(?int $id_serie_tmdb): self
     {
         $this->id_serie_tmdb = $id_serie_tmdb;
+
+        return $this;
+    }
+
+    public function getIsValid(): ?bool
+    {
+        return $this->is_valid;
+    }
+
+    public function setIsValid(bool $is_valid): self
+    {
+        $this->is_valid = $is_valid;
 
         return $this;
     }

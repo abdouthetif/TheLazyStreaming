@@ -17,6 +17,10 @@ class CommentType extends AbstractType
             ->add('content', TextareaType::class, [
                 'label' => 'Votre commentaire',
                 'required' => true,
+                'attr' => [
+                    'rows' => '10',
+                    'placeholder' => 'Écrivez votre commentaire ici...'
+                ]
             ])
             ->add('id_movie_tmdb', HiddenType::class)
             ->add('id_serie_tmdb', HiddenType::class)

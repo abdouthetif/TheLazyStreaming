@@ -1,0 +1,54 @@
+.height {
+    height: 125px
+}
+
+.navbar-brand img {
+    width: 15rem;
+}
+
+.navbar-toggler {
+    padding: 3px 5px;
+}
+
+.navbar-toggler-icon {
+    width: 2rem;
+}
+
+.navMobileView {
+    background-color: rgb(246, 199, 0);
+    width: 45rem;
+    height: auto;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.bg-yellow {
+    background-color: rgb(246, 199, 0);
+}
+
+.nav-position {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: black !important;
+}
+
+li a {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*Tablet*/
+@media only screen and (min-width: 900px) {
+    .nav-position {
+        position: relative;
+    }
+}
