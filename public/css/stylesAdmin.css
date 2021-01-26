@@ -15,35 +15,35 @@ css seront appliques a cette page uniquement.
 @media only screen and (max-width:1000px) {
 
     /*General*/
-    
+
     .container {
         width: 90%;
         margin: auto;
     }
-    
+
     * {
         font-size: 1.1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: white;
         letter-spacing: 0.04rem;
     }
-    
+
     body {
         background-color: #222831;
         margin: 0;
         padding: 0;
     }
-    
+
     section {
         padding: 5% 0px 5% 0px;
     }
-    
+
     small {
         color: rgba(255, 255, 255, 0.5);
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     p {
         display: block;
         text-align: center;
@@ -55,8 +55,8 @@ css seront appliques a cette page uniquement.
     span {
         color: #F6C700;
     }
-    
-    
+
+
     .lazyAdmin{
         padding: 1.9rem;
 
@@ -69,23 +69,23 @@ css seront appliques a cette page uniquement.
         font-size: 2rem;
         text-align: center;
     }
-    
+
     .titrePage {
         text-align: center;
         margin: 2rem auto 3rem;
     }
-    
+
     .titrePage small {
         display: block;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.5rem;
         text-align: center;
     }
-    
+
     /*Image Profil*/
 
     div.imageProfile {
-    
+
         width: 180px;
         height: 180px;
         box-sizing: content-box;
@@ -99,7 +99,7 @@ css seront appliques a cette page uniquement.
         justify-content: center;
         align-items: center;
     }
-    
+
     #image {
         width: 180px;
         height: 180px;
@@ -107,37 +107,37 @@ css seront appliques a cette page uniquement.
         border-radius: 100%;
         cursor: pointer;
     }
-    
+
     /*Titres*/
 
     .titreSection {
         display: flex;
         align-items: center;
-    
+
     }
-    
+
     .barreJaune {
         width: 100%;
         margin: auto;
         height: 3px;
         background-color: #F6C700;
     }
-    
+
     h3 {
         font-size: 0.9rem;
         margin: 10px 15px 15px 0;
-    
+
     }
-    
+
     /*Subtitres*/
 
     h4 {
         font-size: 0.75rem;
         margin: 0 0.7rem 0 0;
         justify-content: start;
-    
+
     }
-    
+
     .subtitre {
         width: 90%;
         margin: 1.5rem auto;
@@ -146,16 +146,16 @@ css seront appliques a cette page uniquement.
         align-items: center;
         margin-top: 1.5rem;
     }
-    
+
     .ligneSubtitre {
         width: 100%;
         margin: auto end;
         height: 1px;
         background-color: #ffffff29;
     }
-     
+
     /*Film & Series*/
-   
+
       .gallery-cell {
         border-radius: 15px;
         width: 10rem;
@@ -163,7 +163,7 @@ css seront appliques a cette page uniquement.
         margin: 1rem 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
         background: #777777;;
-      }  
+      }
 
       ol.flickity-page-dots{
         display: none;
@@ -182,7 +182,7 @@ css seront appliques a cette page uniquement.
         margin: 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     .afficheContainerAjouter {
         display: flex;
         justify-content: center;
@@ -194,12 +194,12 @@ css seront appliques a cette page uniquement.
         margin: 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     .afficheContainerAjouter a svg:hover {
         fill: #f6c900;
     }
-    
-    
+
+
 
     /*Button Commencer*/
 
@@ -211,15 +211,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #enregistrer:hover {
         color: #F6C700;
         background-color: rgb(0, 0, 0);
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     /*Zones Vides*/
 
     #section {
@@ -231,7 +231,7 @@ css seront appliques a cette page uniquement.
         background-color: rgba(0, 0, 0, 0.049);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     /*Titre Commentaires*/
 
     .nom {
@@ -239,27 +239,27 @@ css seront appliques a cette page uniquement.
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
     }
-    
+
     .email {
         display: inline;
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
         color: rgba(255, 255, 255, 0.5);
     }
-    
+
     .date {
         display: inline;
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
         color: rgba(255, 255, 255, 0.25);
     }
-    
+
     .commentaire {
         font-size: 0.7rem;
         text-align: justify;
-    
+
     }
-    
+
     /*Commentaire*/
 
     .carreBlanc {
@@ -270,52 +270,52 @@ css seront appliques a cette page uniquement.
         border-radius: 15px;
         text-align: center;
     }
-    
+
     .ligneCarreBlanc {
         width: 100%;
         height: 1px;
         margin: 0.15rem 0 1.4rem 0;
         background-color: rgba(255, 255, 255, 0.5);
     }
-    
+
     /*Voir, Editer, Supprimer*/
 
     div.row a {
         text-decoration: none;
     }
-    
+
     div.row a:hover {
         color: #f6c900;
     }
-    
+
     div.col1 {
         width: 30%
     }
-    
+
     div.col2 {
         width: 70%;
         text-align: end;
     }
-    
+
     div.col2 a {
         font-size: 0.5rem;
         text-decoration: none;
         color: rgb(255, 255, 255);
     }
-    
+
     /*Likes*/
     .thumpsUp {
         color: #08FF00;
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     .thumpsDown {
         color: rgb(255, 0, 0);
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     /*Logo (Page Admin)*/
 
     .lazyAdmin {
@@ -410,7 +410,7 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 0;
         padding: 0;
-    
+
     }
 
     .messageConfirmation1 {
@@ -418,9 +418,9 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 2rem;
         padding: 0;
-    
+
     }
-    
+
     .confirmation {
         background-color: rgba(0, 0, 0, 0.049);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
@@ -432,7 +432,7 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 2.9rem 0;
     }
-    
+
     #acepter {
         background-color: #00FF08;
         color: black;
@@ -441,15 +441,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter:hover {
         color: white;
         background-color: #00ff08ce;
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-    
-    
+
+
     }
-    
+
     #acepter2 {
         background-color: transparent;
         color: white;
@@ -460,15 +460,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter2:hover {
         color: rgb(0, 0, 0);
         background-color: #08FF00;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     #acepter3 {
         background-color: transparent;
         color: white;
@@ -478,15 +478,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter3:hover {
         color: rgb(0, 0, 0);
         background-color: #f6c700;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     #anuller {
         background-color: #ff0000;
         color: black;
@@ -495,14 +495,14 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #anuller:hover {
         color: white;
         background-color: rgba(255, 0, 0, 0.849);
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-    
+
     }
-    
+
     #anuller2 {
         background-color: transparent;
         color: white;
@@ -513,22 +513,22 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #anuller2:hover {
         color: rgb(255, 255, 255);
         background-color: #f60000;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     .blockButton {
         width: 100%;
         margin: auto;
         text-align: center;
-    
+
     }
-    
+
     /*Footer*/
 
     footer p {
@@ -544,35 +544,35 @@ css seront appliques a cette page uniquement.
 @media only screen and (min-width:1000px) {
 
     /*General*/
-    
+
     .container {
         width: 55%;
         margin: auto;
     }
-    
+
     * {
         font-size: 1.1rem;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: white;
         letter-spacing: 0.04rem;
     }
-    
+
     body {
         background-color: #222831;
         margin: 0;
         padding: 0;
     }
-    
+
     section {
         padding: 5% 0px 5% 0px;
     }
-    
+
     small {
         color: rgba(255, 255, 255, 0.5);
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     p {
         display: block;
         text-align: center;
@@ -584,8 +584,8 @@ css seront appliques a cette page uniquement.
     span {
         color: #F6C700;
     }
-    
-    
+
+
     .lazyAdmin{
         padding: 1.9rem;
 
@@ -598,23 +598,23 @@ css seront appliques a cette page uniquement.
         font-size: 2rem;
         text-align: center;
     }
-    
+
     .titrePage {
         text-align: center;
         margin: 2rem auto 3rem;
     }
-    
+
     .titrePage small {
         display: block;
         color: rgba(255, 255, 255, 0.5);
         font-size: 0.5rem;
         text-align: center;
     }
-    
+
     /*Image Profil*/
 
     div.imageProfile {
-    
+
         width: 180px;
         height: 180px;
         box-sizing: content-box;
@@ -628,7 +628,7 @@ css seront appliques a cette page uniquement.
         justify-content: center;
         align-items: center;
     }
-    
+
     #image {
         width: 180px;
         height: 180px;
@@ -636,37 +636,37 @@ css seront appliques a cette page uniquement.
         border-radius: 100%;
         cursor: pointer;
     }
-    
+
     /*Titres*/
 
     .titreSection {
         display: flex;
         align-items: center;
-    
+
     }
-    
+
     .barreJaune {
         width: 100%;
         margin: auto;
         height: 3px;
         background-color: #F6C700;
     }
-    
+
     h3 {
         font-size: 0.9rem;
         margin: 10px 15px 15px 0;
-    
+
     }
-    
+
     /*Subtitres*/
 
     h4 {
         font-size: 0.75rem;
         margin: 0 0.7rem 0 0;
         justify-content: start;
-    
+
     }
-    
+
     .subtitre {
         width: 90%;
         margin: 1.5rem auto;
@@ -675,16 +675,16 @@ css seront appliques a cette page uniquement.
         align-items: center;
         margin-top: 1.5rem;
     }
-    
+
     .ligneSubtitre {
         width: 100%;
         margin: auto end;
         height: 1px;
         background-color: #ffffff29;
     }
-     
+
     /*Film & Series*/
-   
+
       .gallery-cell {
         border-radius: 15px;
         width: 10rem;
@@ -692,7 +692,7 @@ css seront appliques a cette page uniquement.
         margin: 1rem 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
         background: #777777;;
-      }  
+      }
 
       ol.flickity-page-dots{
         display: none;
@@ -711,7 +711,7 @@ css seront appliques a cette page uniquement.
         margin: 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     .afficheContainerAjouter {
         display: flex;
         justify-content: center;
@@ -723,12 +723,12 @@ css seront appliques a cette page uniquement.
         margin: 1rem;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     .afficheContainerAjouter a svg:hover {
         fill: #f6c900;
     }
-    
-    
+
+
 
     /*Button Commencer*/
 
@@ -740,15 +740,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #enregistrer:hover {
         color: #F6C700;
         background-color: rgb(0, 0, 0);
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     /*Zones Vides*/
 
     #section {
@@ -760,7 +760,7 @@ css seront appliques a cette page uniquement.
         background-color: rgba(0, 0, 0, 0.049);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
     }
-    
+
     /*Titre Commentaires*/
 
     .nom {
@@ -768,27 +768,27 @@ css seront appliques a cette page uniquement.
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
     }
-    
+
     .email {
         display: inline;
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
         color: rgba(255, 255, 255, 0.5);
     }
-    
+
     .date {
         display: inline;
         margin: 0 0.5rem 0 0;
         font-size: 0.7rem;
         color: rgba(255, 255, 255, 0.25);
     }
-    
+
     .commentaire {
         font-size: 0.7rem;
         text-align: justify;
-    
+
     }
-    
+
     /*Commentaire*/
 
     .carreBlanc {
@@ -799,52 +799,52 @@ css seront appliques a cette page uniquement.
         border-radius: 15px;
         text-align: center;
     }
-    
+
     .ligneCarreBlanc {
         width: 100%;
         height: 1px;
         margin: 0.15rem 0 1.4rem 0;
         background-color: rgba(255, 255, 255, 0.5);
     }
-    
+
     /*Voir, Editer, Supprimer*/
 
     div.row a {
         text-decoration: none;
     }
-    
+
     div.row a:hover {
         color: #f6c900;
     }
-    
+
     div.col1 {
         width: 30%
     }
-    
+
     div.col2 {
         width: 70%;
         text-align: end;
     }
-    
+
     div.col2 a {
         font-size: 0.5rem;
         text-decoration: none;
         color: rgb(255, 255, 255);
     }
-    
+
     /*Likes*/
     .thumpsUp {
         color: #08FF00;
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     .thumpsDown {
         color: rgb(255, 0, 0);
         text-align: center;
         font-size: 0.65rem;
     }
-    
+
     /*Logo (Page Admin)*/
 
     .lazyAdmin {
@@ -939,7 +939,7 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 0;
         padding: 0;
-    
+
     }
 
     .messageConfirmation1 {
@@ -947,9 +947,9 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 2rem;
         padding: 0;
-    
+
     }
-    
+
     .confirmation {
         background-color: rgba(0, 0, 0, 0.049);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.364);
@@ -961,7 +961,7 @@ css seront appliques a cette page uniquement.
         text-align: center;
         margin: 2.9rem 0;
     }
-    
+
     #acepter {
         background-color: #00FF08;
         color: black;
@@ -970,15 +970,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter:hover {
         color: white;
         background-color: #00ff08ce;
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-    
-    
+
+
     }
-    
+
     #acepter2 {
         background-color: transparent;
         color: white;
@@ -989,15 +989,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter2:hover {
         color: rgb(0, 0, 0);
         background-color: #08FF00;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     #acepter3 {
         background-color: transparent;
         color: white;
@@ -1007,15 +1007,15 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #acepter3:hover {
         color: rgb(0, 0, 0);
         background-color: #f6c700;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     #anuller {
         background-color: #ff0000;
         color: black;
@@ -1024,14 +1024,14 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #anuller:hover {
         color: white;
         background-color: rgba(255, 0, 0, 0.849);
         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-    
+
     }
-    
+
     #anuller2 {
         background-color: transparent;
         color: white;
@@ -1042,22 +1042,22 @@ css seront appliques a cette page uniquement.
         font-size: 0.75rem;
         letter-spacing: 0.07rem;
     }
-    
+
     #anuller2:hover {
         color: rgb(255, 255, 255);
         background-color: #f60000;
         box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
         border-color: transparent;
-    
+
     }
-    
+
     .blockButton {
         width: 100%;
         margin: auto;
         text-align: center;
-    
+
     }
-    
+
     /*Footer*/
 
     footer p {
