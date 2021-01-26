@@ -75,11 +75,15 @@ class SearchController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $comment = $form->getData();
             $comment->setUser($this->getUser());
+            $comment->setIsValid(false);
 
             $manager->persist($comment);
             $manager->flush();
 
-            $this->addFlash('success', 'Votre commentaire est créé avec succès.');
+            $this->addFlash('success', "Votre commentaire est créé avec succès. Il faudra attendre qu'un modérateur le valide.");
+
+            // Redirection vers la page du film
+            return $this->redirectToRoute('search.detailsDisplay', ['type' => $type, 'id' => $id]);
         }
 
         $tmdbDetails = (new TMDB())->getMovieById($id, $type);
@@ -93,12 +97,14 @@ class SearchController extends AbstractController
         if ($type == 'movie') {
 
             $criteria = [
-                'id_movie_tmdb' => $id
+                'id_movie_tmdb' => $id,
+                'is_valid' => true
             ];
         }
         elseif ($type == 'tv') {
             $criteria = [
-                'id_serie_tmdb' => $id
+                'id_serie_tmdb' => $id,
+                'is_valid' => true
             ];
         }
 

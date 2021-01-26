@@ -105,7 +105,8 @@
         margin: auto;
     }
 
-    form label {
+    form label,
+    #type {
         font-size: 0.74rem;
         margin: 0;
     }
@@ -319,7 +320,8 @@
         margin: auto;
     }
 
-    form label {
+    form label,
+    #type {
         font-size: 0.74rem;
         margin: 0;
     }
@@ -556,7 +558,8 @@
         margin: auto;
     }
 
-    form label {
+    form label,
+    #type {
         font-size: 0.74rem;
         margin: 0;
     }

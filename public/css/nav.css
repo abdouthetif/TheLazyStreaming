@@ -41,6 +41,11 @@ li a:hover {
     color: black !important;
 }
 
+li a {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 900px) {
     .nav-position {
