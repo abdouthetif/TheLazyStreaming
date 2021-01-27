@@ -21,6 +21,13 @@ class AppFixtures extends Fixture
             'pseudo' => 'admin'
         ]);
 
+        UserFactory::new()->createMany(15);
+
+
+
+
+
+
         $manager->flush();
     }
 }

@@ -76,6 +76,11 @@ class User implements UserInterface
     private $comments;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $code;
+
+    /**
      * User constructor.
      * @throws \Exception
      */
@@ -260,6 +265,18 @@ class User implements UserInterface
                 $comment->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCode(): ?int
+    {
+        return $this->code;
+    }
+
+    public function setCode(?int $code): self
+    {
+        $this->code = $code;
 
         return $this;
     }
