@@ -34,7 +34,7 @@ class AdminController extends AbstractController
     #[Route('/admin/comment/delete/{id<\d+>}', name: 'admin.comment.delete')]
     public function delete(Comment $comment): Response
     {
-        // On persiste en BDD
+        // On supprime en BDD
         $this->manager->remove($comment);
         $this->manager->flush();
 

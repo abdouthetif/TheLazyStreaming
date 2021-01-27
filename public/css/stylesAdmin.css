@@ -38,7 +38,8 @@ css seront appliques a cette page uniquement.
         padding: 5% 0px 5% 0px;
     }
 
-    small {
+    small,
+    small p {
         color: rgba(255, 255, 255, 0.5);
         text-align: center;
         font-size: 0.65rem;
@@ -571,7 +572,8 @@ css seront appliques a cette page uniquement.
         padding: 5% 0px 5% 0px;
     }
 
-    small {
+    small,
+    small p {
         color: rgba(255, 255, 255, 0.5);
         text-align: center;
         font-size: 0.65rem;
@@ -1064,6 +1066,11 @@ css seront appliques a cette page uniquement.
         margin: auto;
         text-align: center;
 
+    }
+
+    #comment-option a,
+    #comment-option small {
+        display: inline !important;
     }
 
     /*Footer*/

@@ -21,13 +21,13 @@
                 {% endif %}
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Espace personnel</a>
+                        <a class="nav-link" href="{{ path('user.index') }}">Espace personnel</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('security.logout') }}">Deconnexion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Configuration</a>
+                        <a class="nav-link" href="{{ path('user.config.index') }}">Configuration</a>
                     </li>
 
                 {% else %}

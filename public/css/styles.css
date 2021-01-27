@@ -344,11 +344,6 @@ css seront appliques a cette page uniquement.
         text-decoration: none;
     }
 
-    a:hover {
-        text-decoration: none;
-        color: #F6C700 !important;
-    }
-
     .col {
         display: flex;
         justify-content: space-between;
