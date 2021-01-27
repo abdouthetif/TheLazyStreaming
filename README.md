@@ -8,7 +8,7 @@ Il faut commencer par lancer cmder et se placer dans le dossier dans lequel on s
 
 Ensuite on exècute la commande :
 
-git clone https://github.com/abdouthetif/TheLazyStreaming <nom du dossier>
+git clone https://github.com/abdouthetif/TheLazyStreaming nom-du-dossier
 
 Il faut ensuite exécuter la commande :
 
