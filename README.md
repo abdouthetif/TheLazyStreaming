@@ -35,7 +35,7 @@ Il faut ensuite exécuter 3 commandes dans Cmder :
   
   symfony console doctrine:fixtures:load
 
-S'il y a une erreur lors du lancement des fixtures il faudra :
+S'il y a une erreur lors du lancement des fixtures il faudra supprimer toutes les migrations présentent dans le dossier migration puis :
 
   1. relancer une migration :
   
