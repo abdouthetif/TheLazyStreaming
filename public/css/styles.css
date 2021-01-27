@@ -18,7 +18,7 @@ css seront appliques a cette page uniquement.
 
     .container {
         width: 100%;
-        margin: 10% auto;
+        margin: auto;
         
     }
 
@@ -114,7 +114,7 @@ css seront appliques a cette page uniquement.
     /*Formulaire*/
 
     form {
-        width: 80%;
+        width: 60%;
         margin: auto;
     }
 
@@ -122,6 +122,12 @@ css seront appliques a cette page uniquement.
         font-size: 0.74rem;
         margin: 0;
     }
+
+    label.required {
+        width: 100%;
+        text-align: start !important;
+    }
+
 
     form input {
         width: 100%;
@@ -219,7 +225,7 @@ css seront appliques a cette page uniquement.
 
     .container {
         width: 75%;
-        margin: 4rem auto;
+        margin: auto;
         
     }
 
@@ -287,7 +293,7 @@ css seront appliques a cette page uniquement.
     /*Formulaire*/
 
     form {
-        width: 50%;
+        width: 60%;
         margin: auto;
     }
 
@@ -295,6 +301,12 @@ css seront appliques a cette page uniquement.
         font-size: 0.74rem;
         margin: 0;
     }
+
+    label.required {
+        width: 100%;
+        text-align: start !important;
+    }
+
 
     form input {
         width: 100%;
@@ -392,7 +404,7 @@ css seront appliques a cette page uniquement.
 
     .container {
         width: 50%;
-        margin: 4rem auto;
+        margin: auto;
         
     }
 
@@ -465,13 +477,19 @@ css seront appliques a cette page uniquement.
     /*Formulaire*/
 
     form {
-        width: 50%;
+        width: 60%;
         margin: auto;
     }
 
     form label {
+        width: 100%;
         font-size: 0.74rem;
-        margin: 0;
+        margin: 0 !important;
+        text-align: start;
+    }
+    label.required {
+        width: 100%;
+        text-align: start !important;
     }
 
     form input {

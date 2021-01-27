@@ -3,20 +3,24 @@
 {% block title %}Mot de passe oublié{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <main>
 
-    <h1>Reinitialiser votre mot de passe</h1>
+            <h1>Reinitialiser votre mot de passe</h1>
 
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success mt-3" role="alert">{{ message }}</div>
-    {% endfor %}
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success mt-3" role="alert">{{ message }}</div>
+            {% endfor %}
 
-    {% for message in app.flashes('denied') %}
-        <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
-    {% endfor %}
+            {% for message in app.flashes('denied') %}
+                <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
+            {% endfor %}
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Envoyer" class="btn btn-primary">
-    {{ form_end(form) }}
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <input type="submit" value="Envoyer" class="btn btn-primary">
+            {{ form_end(form) }}
 
+        </main>
+    </div>
 {% endblock %}

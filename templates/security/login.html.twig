@@ -2,57 +2,68 @@
 
 {% block title %}Connectez-vous !{% endblock %}
 
+{%  block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
 {% block body %}
-    <!-- Logo TheLazyStreaming -->
-    <div class="logo">
-        <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="Logo TheLazyStreaming" width="250">
+    <div class="container">
+        <main>
+            <!-- Logo TheLazyStreaming -->
+            <div class="logo">
+                <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="Logo TheLazyStreaming" width="200">
+            </div>
+
+            <!-- Login Form -->
+            <form method="post">
+
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                {% endif %}
+
+                <div>
+                    <label for="inputEmail" class="text-white">Email </label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Entrez votre Email" required autofocus>
+                </div>
+
+                <div>
+                    <label for="inputPassword" class="text-white">Mot de passe</label>
+                    <input type="password" name="password" id="inputPassword" aria-describedby="passwordHelp" placeholder="Mot de passe" required>
+                    <small>Ne partagez jamais votre mot de passe</small>
+                </div>
+
+
+                <input type="hidden" name="_csrf_token"
+                       value="{{ csrf_token('authenticate') }}"
+                >
+
+                <div class="row">
+
+                    <div class="col">
+                        <a href="{{ path("password_forgotten") }}">Mot de passe oublié ?</a>
+                    </div>
+
+                    <div class="col">
+                        <button type="submit" class="btn" id="enregistrer">Connexion</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- Message -->
+            <a href="{{ path('user.signup') }}">Vous n'avez pas de compte ? Inscrivez-vous</a>
+        </main>
     </div>
-
-    <!-- Login Form -->
-    <form method="post">
-
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
-
-        {% if app.user %}
-            <div class="mb-3">
-                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-            </div>
-        {% endif %}
-
-        <div>
-            <label for="inputEmail" class="text-white">Email </label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Entrez votre Email" required autofocus>
-        </div>
-
-        <div>
-            <label for="inputPassword" class="text-white">Mot de passe</label>
-            <input type="password" name="password" id="inputPassword" aria-describedby="passwordHelp" placeholder="Mot de passe" required>
-            <small>Ne partagez jamais votre mot de passe</small>
-        </div>
-
-
-        <input type="hidden" name="_csrf_token"
-               value="{{ csrf_token('authenticate') }}"
-        >
-
-        <div class="row">
-
-            <div class="col">
-                <a href="{{ path("password_forgotten") }}">Mot de passe oublié ?</a>
-            </div>
-
-            <div class="col">
-                <button type="submit" class="btn" id="enregistrer">Connexion</button>
-            </div>
-
-        </div>
-
-    </form>
-
-    <!-- Message -->
-    <a href="{{ path('user.signup') }}">Vous n'avez pas de compte ? Inscrivez-vous</a>
 
 
     {#

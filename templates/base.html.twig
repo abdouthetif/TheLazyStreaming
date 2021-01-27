@@ -26,10 +26,11 @@
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
             <!-- CSS -->
-            <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+
         {% endblock %}
 
-        <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+
     </head>
     <body>
 
@@ -39,22 +40,13 @@
         {%  endblock %}
 
         <!-----------------------------------------------MAIN--------------------------------------------->
-        <main class="container px-4">
-
-            <!-- Messages flash -->
-            {% for message in app.flashes('success') %}
+        <!-- Messages flash -->
+        {% for message in app.flashes('success') %}
                 <div class="alert alert-success mt-3" role="alert">{{ message }}</div>
-            {% endfor %}
+        {% endfor %}
 
-            {% block body %}{% endblock %}
-        </main>
+        {% block body %}{% endblock %}
 
-        <!-------------------------------------------FOOTER ----------------------------------------->
-        <hr>
-
-        <footer>
-            <p>© 2021 TheLazyStreaming. All Rights Reserved.</p>
-        </footer>
 
         {% block javascripts %}
 

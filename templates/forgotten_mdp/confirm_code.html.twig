@@ -2,16 +2,38 @@
 
 {% block body %}
 
-    <h1>Renseignez le code de confirmation à 4 chiffres reçu par mail</h1>
+    <div class="container">
 
+        <!-- Title -->
+        <div class="titrePage">
 
-    {% for message in app.flashes('denied') %}
-        <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
-    {% endfor %}
+            <img src="./assets/Logos/TheLazyStreamingHorizontal.png" alt="" width="130">
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input type="submit" value="Envoyer" class="btn btn-primary">
-    {{ form_end(form) }}
+            <small>Saisissez le code pour la recuperation de compte reçu par mail</small>
+            <h1>Saisissez le code</h1>
+            <div class="barreJaune"></div>
+        </div>
+
+        <!-- Formulaire Mot de passe oublie -->
+        {{ form_start(form) }}
+        <form action="">
+
+            <div>
+                <input type="number"  placeholder="Example. 8542" min="0000" max="9999"><br>
+            </div>
+
+            <div>
+                {{ form_widget(form) }}
+                <button type="button" class="btn" id="enregistrer" value="Envoyer">Envoyer</button>
+            </div>
+
+        </form>
+        {{ form_end(form) }}
+
+        {% for message in app.flashes('denied') %}
+            <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
+        {% endfor %}
+
+    </div>
 
 {% endblock %}

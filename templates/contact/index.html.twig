@@ -1,27 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Contactez-nous{% endblock %}
+{%  block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <main>
 
-    <!-- Title -->
-    <div class="titrePage">
+            <!-- Title -->
+            <div class="titrePage">
 
-        <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" alt="TheLazytStreaming Logo" width="130">
+                <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" alt="TheLazytStreaming Logo" width="130">
 
-        <small>Veuillez compléter les champs avec les informations correspondantes</small>
-        <h1>Nous contacter</h1>
-        <div class="barreJaune"></div>
+                <small>Veuillez compléter les champs avec les informations correspondantes</small>
+                <h1>Nous contacter</h1>
+                <div class="barreJaune"></div>
+            </div>
+
+            <!-- Contact Form -->
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div>
+                <div>
+                    <button type="submit" class="btn" id="enregistrer">Envoyer</button>
+                </div>
+            </div>
+            {{ form_end(form) }}
+
+        </main>
     </div>
-
-    <!-- Contact Form -->
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <div>
-        <div>
-            <button type="submit" class="btn" id="enregistrer">Envoyer</button>
-        </div>
-    </div>
-    {{ form_end(form) }}
-
 {% endblock %}
