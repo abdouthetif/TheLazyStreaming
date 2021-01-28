@@ -81,6 +81,8 @@
                 {{ form_errors(form.year) }}
             </div>
 
+            <hr>
+
             <div>
                 {{ form_label(form.keyword) }}
                 <small>{{ form_help(form.keyword) }}</small>
@@ -96,8 +98,14 @@
 
             {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
                 <!-- Login link -->
-                <a href="{{ path('user.signup') }}">Vous n’avez pas de compte ? Inscrivez-vous c'est 100% gratuit!</a>
+                <small><a  href="{{ path('user.signup') }}">Vous n’avez pas de compte ? Inscrivez-vous c'est 100% gratuit!</a></small>
             {% endif %}
         </main>
     </div>
+{% endblock %}
+{% block footer %}
+    <footer>
+        <p>© 2021 TheLazyStreaming. All Rights Reserved</p>
+    </footer>
+
 {% endblock %}

@@ -20,16 +20,17 @@ body {
     padding: 0;
 }
 
-.sectionBlock {
-    width: 100%;
-    margin: 3.5rem auto;
-    text-align: center;
-}
+    .blockButton {
+        display: flex;
+        width: fit-content;
+        margin: 2rem auto;
+        text-align: center;
+    }
 
 /* Titre */
 
 h1 {
-    font-family: 'Russo One', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Russo One';
     font-size: 2rem;
     text-align: center;
 }
@@ -495,11 +496,12 @@ div.affiche {
 
 /* Buttons */
 
-.blockButton {
-    width: fit-content;
-    margin: 2rem auto;
-    text-align: center;
-}
+    .blockButton {
+        display: flex;
+        width: fit-content;
+        margin: 2rem auto;
+        text-align: center;
+    }
 
 #voir {
     background-color: #f6c900;
@@ -896,6 +898,7 @@ div.affiche {
 /* Buttons */
 
 .blockButton {
+    display: flex;
     width: fit-content;
     margin: 2rem auto;
     text-align: center;

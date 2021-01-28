@@ -27,6 +27,8 @@
 
             <!-- CSS -->
             <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
         {% endblock %}
 
@@ -49,6 +51,7 @@
         {% endfor %}
 
         {% block body %}{% endblock %}
+        {% block footer %}{% endblock %}
 
 
         {% block javascripts %}

@@ -2,7 +2,7 @@ div.bg-yellow.d-flex {
     background-color: transparent !important;
     width: 85%;
     height: fit-content;
-    margin: 1rem auto 0 auto;
+    margin: 0.5rem auto 0 auto;
     align-items: center;
     justify-content: space-between;
 }
@@ -33,6 +33,7 @@ a.nav-link {
 }
 
 a.nav-link:hover {
+    font-size: 0.7rem;
     color: #f6c700 !important;
     text-decoration-line: overline;
 
@@ -86,6 +87,6 @@ li a {
 @media only screen and (min-width: 900px) {
     .nav-position {
         position: relative;
-        margin: 2rem auto;
+        margin: 0.5rem auto;
     }
 }

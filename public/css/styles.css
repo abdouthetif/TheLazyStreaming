@@ -17,7 +17,7 @@ css seront appliques a cette page uniquement.
     /*General*/
 
     .container {
-        width: 100%;
+        width: 95%;
         margin: auto;
         
     }
@@ -213,7 +213,7 @@ css seront appliques a cette page uniquement.
         color: rgba(255, 255, 255, 0.5);
         text-align: center !important;
         font-size: 0.46rem;
-        padding-top: 14rem;
+        padding-top: 3rem;
     }
 
 }
@@ -224,7 +224,7 @@ css seront appliques a cette page uniquement.
     /*General*/
 
     .container {
-        width: 75%;
+        width: 65%;
         margin: auto;
         
     }
@@ -258,7 +258,7 @@ css seront appliques a cette page uniquement.
     /*Titre pour la (Page SignUp)*/
 
     h1 {
-        font-family: 'Russo One', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: Russo One, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 2rem;
         text-align: center;
     }
@@ -293,7 +293,7 @@ css seront appliques a cette page uniquement.
     /*Formulaire*/
 
     form {
-        width: 60%;
+        width: 50%;
         margin: auto;
     }
 
@@ -329,7 +329,7 @@ css seront appliques a cette page uniquement.
     }
 
     form div {
-        padding: 0.4rem;
+        padding: 0;
     }
 
     form div:last-of-type {
@@ -348,12 +348,22 @@ css seront appliques a cette page uniquement.
 
     a {
         width: 100%;
-        margin: auto;
+        margin:  2rem auto;
         display: block;
         color: rgba(255, 255, 255, 0.508);
         text-align: center;
-        font-size: 0.63rem;
+        font-size: 0.63rem !important;
         text-decoration: none;
+    }
+
+    a:hover {
+        width: 100%;
+        margin:  2rem auto;
+        display: block;
+        color:  #F6C700;
+        text-align: center;
+        font-size: 0.63rem !important;
+        text-decoration: none ;
     }
 
     .col {
@@ -387,7 +397,7 @@ css seront appliques a cette page uniquement.
         color: rgba(255, 255, 255, 0.5);
         text-align: center !important;
         font-size: 0.46rem;
-        padding-top: 15rem;
+        padding-top: 3rem;
     }
 
 }
@@ -398,7 +408,7 @@ css seront appliques a cette page uniquement.
     /*General*/
 
     .container {
-        width: 50%;
+        width: 55%;
         margin: auto;
         
     }
@@ -432,7 +442,7 @@ css seront appliques a cette page uniquement.
     /*Titre pour la (Page SignUp)*/
 
     h1 {
-        font-family: 'Russo One', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'Russo One';
         font-size: 2rem;
         text-align: center;
     }
@@ -527,12 +537,22 @@ css seront appliques a cette page uniquement.
 
     a {
         width: 100%;
-        margin: 1rem auto;
+        margin:  2rem auto;
         display: block;
         color: rgba(255, 255, 255, 0.508);
         text-align: center;
-        font-size: 0.63rem;
+        font-size: 0.63rem !important;
         text-decoration: none;
+    }
+
+    a:hover {
+        width: 100%;
+        margin:  2rem auto;
+        display: block;
+        color:  #F6C700;
+        text-align: center;
+        font-size: 0.63rem !important;
+        text-decoration: none ;
     }
 
     a:hover {
@@ -571,7 +591,7 @@ css seront appliques a cette page uniquement.
         color: rgba(255, 255, 255, 0.5);
         text-align: center !important;
         font-size: 0.46rem;
-        padding-top: 15rem;
+        padding-top: 3rem;
     }
 
 }

@@ -71,6 +71,10 @@
         font-family: 'Russo one', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
+    hr {
+        margin: 0.4rem auto;
+        background-color: white !important;
+    }
     /*Image Profil (Page Espace Personelle)*/
 
     div.imageProfile {
@@ -211,9 +215,8 @@
     /*General*/
 
     .container {
-        width: 75%;
+        width: 60%;
         margin: auto;
-        
     }
 
     * {
@@ -229,7 +232,6 @@
         padding: 0;
     }
 
-    small,
     small p {
         display: block;
         color: rgba(255, 255, 255, 0.5);
@@ -239,6 +241,8 @@
     /*Logo Principal (Page Login)*/
 
     .logo {
+        width: 20%;
+        margin: auto;
         text-align: center !important;
     }
 
@@ -252,7 +256,7 @@
 
     .titrePage {
         text-align: center;
-        margin: 0 0 1rem 0;
+        margin: auto;
     }
 
     .barreJaune {
@@ -260,15 +264,43 @@
         margin: 0.3rem auto;
         height: 1px;
         background-color: #F6C700;
-
     }
 
+    p {
+        font-size: 0.7rem;
+        width: 75%;
+        margin: 3.5rem auto;
+        text-align: jucenterstify;
+    }
 
     hr {
-        margin: 0.5rem;
+        margin: 0.4rem auto;
+        background-color: white !important;
+    }
+
+    hr:first-of-type {
+        margin: 0.7rem auto;
+        background-color: white !important;
+    }
+    div.row {
+        width: 100%;
+        margin: 0.4rem auto;
+    }
+    div.col-4 {
+        display: flex !important;
+        justify-content: space-between !important;
     }
 
     select#get_search_genre {
+        width: 100%;
+        margin: 0.5rem auto;
+        padding: 0.4rem;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+    select#get_search_genre option{
         width: 100%;
         margin: 0.3rem auto;
         padding: 0.4rem;
@@ -276,46 +308,40 @@
         border: 1px solid white;
         border-radius: 5px;
         font-size: 0.8rem;
-
+        color: black;
     }
-
 
     input#film {
         margin: 0;
         text-align: start;
-
     }
-
     input#serie
-     {
+    {
         margin: 0;
         text-align: start;
-
     }
-
     /*Erreur 404 (Page 404) */
 
     div._404{
         margin-top: 20%;
         text-align: center;
-    
     }
-    
+
     div._404 img {
-        margin: 0;   
+        margin: 0;
     }
-    
+
     div._404 p {
         text-align: center;
         font-size: 2rem;
         margin: 0;
         font-family: 'Russo one', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-    
+
     /*Formulaire*/
 
     form {
-        width: 75%;
+        width: 60%;
         margin: auto;
     }
 
@@ -327,7 +353,7 @@
 
     form input {
         width: 100%;
-        margin: 0.3rem auto;
+        margin: 0.6rem auto;
         padding: 0.4rem;
         background-color: transparent;
         border: 1px solid white;
@@ -345,10 +371,6 @@
         font-size: 0.8rem;
     }
 
-    form div {
-        padding: 0.3rem;
-    }
-
     form div:last-of-type {
         text-align: center;
     }
@@ -363,7 +385,7 @@
         text-decoration: none;
     }
 
-    a {
+    small a {
         width: 100%;
         margin: 1rem auto;
         display: block;
@@ -373,23 +395,47 @@
         text-decoration: none;
     }
 
-    a:hover {
+    small a:hover {
+        font-size: 0.63rem;
         text-decoration: none;
         color: #F6C700 !important;
     }
 
-    .col {
+    div.row {
+        width: 100%;
+        margin: 0.7rem auto;
+    }
+
+    div.col-4 {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Smalls*/
+
+    p#get_search_genre_help {
+        margin: 0;
+    }
+    p#get_search_rating_help{
+        margin: 0;
+    }
+
+    p#get_search_year_help{
+        margin: 0;
+    }
+
+    p#get_search_keyword_help{
+        margin: 0;
     }
 
     input #film {
         display: inline !important;
     }
 
-   input[type="radio"] {
-       display: flex;
-   }
+    input[type="radio"] {
+        display: flex;
+    }
 
     small p {
         margin-bottom: 0;
@@ -416,12 +462,12 @@
     }
 
     /*Footer*/
-    
+
     footer p {
         color: rgba(255, 255, 255, 0.5);
         text-align: center !important;
         font-size: 0.46rem;
-        padding-top: 15rem;
+        padding: 1rem;
     }
 
 }
@@ -434,7 +480,6 @@
     .container {
         width: 50%;
         margin: auto;
-        
     }
 
     * {
@@ -493,13 +538,23 @@
     }
 
     hr {
-        margin: 0.4rem;
-        background-color: white;
+        margin: 0.4rem auto;
+        background-color: white !important;
+    }
+
+    div.row {
+        width: 100%;
+        margin: 0.7rem auto;
+    }
+
+    div.col-4 {
+        display: flex !important;
+        justify-content: space-between !important;
     }
 
     select#get_search_genre {
         width: 100%;
-        margin: 0.3rem auto;
+        margin: 0.5rem auto;
         padding: 0.4rem;
         background-color: transparent;
         border: 1px solid white;
@@ -607,9 +662,15 @@
         color: #F6C700 !important;
     }
 
+    div.row {
+        width: 100%;
+        margin: 0.7rem auto;
+    }
+
     div.col-4 {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     /* Smalls*/
@@ -667,7 +728,7 @@
         color: rgba(255, 255, 255, 0.5);
         text-align: center !important;
         font-size: 0.46rem;
-        padding-top: 15rem;
+        padding: 1rem;
     }
 
 }

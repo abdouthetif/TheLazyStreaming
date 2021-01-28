@@ -111,6 +111,15 @@
         background: #f6c900;
     }
 
+    /*Footer*/
+
+    footer p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center !important;
+        font-size: 0.46rem;
+        padding: 1rem;
+    }
+
 }
 
 /* Tablet */
@@ -220,6 +229,15 @@
         height: auto;
         margin: 2rem 1rem;
         background: #f6c900;
+    }
+
+    /*Footer*/
+
+    footer p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center !important;
+        font-size: 0.46rem;
+        padding: 1rem;
     }
 
 }
@@ -334,6 +352,13 @@
         background: #f6c900;
         counter-increment: gallery-cell;
     }
+    /*Footer*/
 
+    footer p {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center !important;
+        font-size: 0.46rem;
+        padding: 1rem;
+    }
 
 }
