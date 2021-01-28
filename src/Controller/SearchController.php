@@ -55,9 +55,11 @@ class SearchController extends AbstractController
         $resultID = array_rand($results, 1);
         $result = $results[$resultID];
 
+        $listes = $this->getUser() ? $this->getUser()->getListes() : '' ;
+
         return $this->render('search/result.html.twig', [
             'result' => $result,
-            'listes' => $this->getUser()->getListes()
+            'listes' => $listes
         ]);
     }
 
@@ -112,6 +114,7 @@ class SearchController extends AbstractController
         }
 
         $comments = $commentRepository->findBy($criteria, ['createdAt' => 'DESC'])??'';
+        $listes = $this->getUser() ? $this->getUser()->getListes() : '' ;
 
         return $this->render('search/details.html.twig', [
             'tmdbDetails' => $tmdbDetails,
@@ -120,7 +123,7 @@ class SearchController extends AbstractController
             'type' => $type,
             'id' => $id,
             'comments' => $comments,
-            'listes' => $this->getUser()->getListes()
+            'listes' => $listes
         ]);
     }
 }

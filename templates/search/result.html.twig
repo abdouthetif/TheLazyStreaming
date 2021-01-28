@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {%  block stylesheets %}
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    {{ parent() }}
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/stylesResultPage.css') }}">
 {% endblock %}
 
-{% block title %}Page de résultat{% endblock %}
+{% block title %}Resultat de la recherche{% endblock %}
 
 {% block body %}
 
@@ -22,119 +21,122 @@
         {% set title = result.name %}
     {% endif %}
 
-    <!-- Title -->
-    <div class="titrePage">
-        <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" alt="TheLazyStreaming Logo" width="130">
-        <small>Nous avons trouve le titre suivant pour vous:</small>
-        <h1>{{ title }}</h1>
-        <div class="barreJaune"></div>
-    </div>
-
-    <section class="sectionBlock">
-        <div class="row carreBlanc">
-
-            <!-- StoryLine -->
-            <div class="col">
-                <div>
-                    <p>
-                        {{ result.overview }}
-                    </p>
-                </div>
-            </div>
-
-            <!-- Affiche -->
-            <div class="col">
-                <div class="affiche">
-                    <img id="image" src="https://image.tmdb.org/t/p/w500/{{ result.poster_path }}" alt="{{ title }}">
-                </div>
-            </div>
-
-            <!-- Fontionalites -->
-            <div class="col">
-                <div class="fonctionnalites">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        {% set seenAdd = "" %}
-                        {% set seenDelete = "d-none" %}
-                        {% set laterAdd = "" %}
-                        {% set laterDelete = "d-none" %}
-                        {% set favAdd = "" %}
-                        {% set favDelete = "d-none" %}
-
-                        {% for liste in listes %}
-                            {% if liste.name == 'seen' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
-                                {% set seenAdd = "d-none" %}
-                                {% set seenDelete = "" %}
-                                {% set id = liste.id %}
-                            {% elseif liste.name == 'later' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
-                                {% set laterAdd = "d-none" %}
-                                {% set laterDelete = "" %}
-                            {% elseif liste.name == 'favoris' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
-                                {% set favAdd = "d-none" %}
-                                {% set favDelete = "" %}
-                            {% endif %}
-                        {% endfor %}
-
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
-                                 viewBox="0 0 16 16" class="logosFonctions">
-                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                <path
-                                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                            </svg>
-
-                            <a class="{{ seenAdd }}" href="{{ path('user.addListe', {'liste': 'seen', 'type': type, 'id': result.id }) }}">Ajouter à ma liste vue</a>
-                            <a class="{{ seenDelete }}" href="{{ path('user.removeListe', {'liste': 'seen', 'type': type, 'id': result.id }) }}">Supprimer de ma liste vue</a>
-                        </div>
-
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
-                                 viewBox="0 0 16 16" class="logosFonctions">
-                                <path
-                                        d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
-                            </svg>
-                            <a class="{{ laterAdd }}" href="{{ path('user.addListe', {'liste': 'later', 'type': type, 'id': result.id }) }}">Ajouter à ma liste à regarder plus tard</a>
-                            <a class="{{ laterDelete }}" href="{{ path('user.removeListe', {'liste': 'later', 'type': type, 'id': result.id }) }}">Supprimer de ma liste à regarder plus tard</a>
-                        </div>
-
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
-                                 viewBox="0 0 16 16" class="logosFonctions">
-                                <path fill-rule="evenodd"
-                                      d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.253L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.253l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
-                            </svg>
-                            <a class="{{ favAdd }}" href="{{ path('user.addListe', {'liste': 'favoris', 'type': type, 'id': result.id }) }}">Ajouter à ma liste de favoris</a>
-                            <a class="{{ favDelete }}" href="{{ path('user.removeListe', {'liste': 'favoris', 'type': type, 'id': result.id }) }}">Supprimer de ma liste de favoris</a>
-                        </div>
-
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
-                                 viewBox="0 0 16 16" class="logosFonctions">
-                                <path
-                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
-                            </svg>
-                            <a href="{{ path('search.detailsDisplay', {'type': type, 'id': result.id }) }}">Commenter</a>
-                        </div>
-                    {% else %}
-
-                    <em><span>Veuillez vous connecter pour acceder aux fonctionnalités d'ajout aux listes et de commentaire</span></em>
-                    {% endif %}
-                </div>
-
-                <div class="blockButton">
-
-                    <a href="{{ path('search.detailsDisplay', {'type': type, 'id': result.id }) }}" class="btn" id="voir">Voir</a>
-                    <a href="javascript:history.go(0)" type="button" class="btn" id="relancer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700"
-                             viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
-                            <path
-                                    d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
+<div class="container">
+    <main>
+        <!-- Title -->
+        <div class="titrePage">
+            <img src="{{ asset('assets/Logos/TheLazyStreamingHorizontal.png') }}" alt="TheLazyStreaming Logo" width="130">
+            <small>Nous avons trouve le titre suivant pour vous:</small>
+            <h1>{{ title }}</h1>
+            <div class="barreJaune"></div>
         </div>
-    </section>
 
+        <section class="sectionBlock">
+            <div class="row carreBlanc">
+
+                <!-- StoryLine -->
+                <div class="col">
+                    <div>
+                        <p>
+                            {{ result.overview }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Affiche -->
+                <div class="col">
+                    <div class="affiche">
+                        <img id="image" src="https://image.tmdb.org/t/p/w500/{{ result.poster_path }}" alt="{{ title }}">
+                    </div>
+                </div>
+
+                <!-- Fontionalites -->
+                <div class="col">
+                    <div class="fonctionnalites">
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            {% set seenAdd = "" %}
+                            {% set seenDelete = "d-none" %}
+                            {% set laterAdd = "" %}
+                            {% set laterDelete = "d-none" %}
+                            {% set favAdd = "" %}
+                            {% set favDelete = "d-none" %}
+
+                            {% for liste in listes %}
+                                {% if liste.name == 'seen' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
+                                    {% set seenAdd = "d-none" %}
+                                    {% set seenDelete = "" %}
+                                    {% set id = liste.id %}
+                                {% elseif liste.name == 'later' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
+                                    {% set laterAdd = "d-none" %}
+                                    {% set laterDelete = "" %}
+                                {% elseif liste.name == 'favoris' and (liste.idMovie == result.id) or (liste.idSerie == result.id) %}
+                                    {% set favAdd = "d-none" %}
+                                    {% set favDelete = "" %}
+                                {% endif %}
+                            {% endfor %}
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
+                                     viewBox="0 0 16 16" class="logosFonctions">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                    <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                </svg>
+
+                                <a class="{{ seenAdd }}" href="{{ path('user.addListe', {'liste': 'seen', 'type': type, 'id': result.id }) }}">Ajouter à ma liste vue</a>
+                                <a class="{{ seenDelete }}" href="{{ path('user.removeListe', {'liste': 'seen', 'type': type, 'id': result.id }) }}">Supprimer de ma liste vue</a>
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
+                                     viewBox="0 0 16 16" class="logosFonctions">
+                                    <path
+                                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+                                </svg>
+                                <a class="{{ laterAdd }}" href="{{ path('user.addListe', {'liste': 'later', 'type': type, 'id': result.id }) }}">Ajouter à ma liste à regarder plus tard</a>
+                                <a class="{{ laterDelete }}" href="{{ path('user.removeListe', {'liste': 'later', 'type': type, 'id': result.id }) }}">Supprimer de ma liste à regarder plus tard</a>
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
+                                     viewBox="0 0 16 16" class="logosFonctions">
+                                    <path fill-rule="evenodd"
+                                          d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.253L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.253l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+                                </svg>
+                                <a class="{{ favAdd }}" href="{{ path('user.addListe', {'liste': 'favoris', 'type': type, 'id': result.id }) }}">Ajouter à ma liste de favoris</a>
+                                <a class="{{ favDelete }}" href="{{ path('user.removeListe', {'liste': 'favoris', 'type': type, 'id': result.id }) }}">Supprimer de ma liste de favoris</a>
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#f6c700"
+                                     viewBox="0 0 16 16" class="logosFonctions">
+                                    <path
+                                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                </svg>
+                                <a href="{{ path('search.detailsDisplay', {'type': type, 'id': result.id }) }}">Commenter</a>
+                            </div>
+                        {% else %}
+
+                        <em><span>Veuillez vous connecter pour acceder aux fonctionnalités d'ajout aux listes et de commentaire</span></em>
+                        {% endif %}
+                    </div>
+
+                    <div class="blockButton">
+
+                        <a href="{{ path('search.detailsDisplay', {'type': type, 'id': result.id }) }}" class="btn" id="voir">Voir</a>
+                        <a href="javascript:history.go(0)" type="button" class="btn" id="relancer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700"
+                                 viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                      d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z" />
+                                <path
+                                        d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 {% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié{% endblock %}
+
+{%  block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <main>
+
+            <!-- Title -->
+            <div class="titrePage pb-3">
+
+                <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="TheLazyStreaming Logo" width="130">
+
+                <small>Veuillez renseigner votre email dans le champs correspondant</small>
+                <h1>Reinitialiser votre mot de passe</h1>
+                <div class="barreJaune"></div>
+
+            </div>
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div>
+                <button type="submit" class="btn" id="enregistrer">Envoyer</button>
+            </div>
+            {{ form_end(form) }}
+
+        </main>
+    </div>
+{% endblock %}

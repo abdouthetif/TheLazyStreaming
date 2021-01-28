@@ -1,5 +1,41 @@
-.height {
-    height: 125px
+div.bg-yellow.d-flex {
+    background-color: transparent !important;
+    width: 85%;
+    height: fit-content;
+    margin: 1rem auto 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+a#logo {
+    text-align: start;
+    align-items: center;
+    margin: 0;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-transparent.nav-position {
+    margin: 0 !important;
+}
+
+a#logo img {
+    width: 10rem;
+    text-align: start;
+    margin: 0 !important;
+}
+
+div.navMobileView.collapse.navbar-collapse.justify-content-end {
+    background-color: transparent;
+    text-align: end !important;
+    margin: auto;
+}
+
+a.nav-link {
+    font-size: 0.7rem;
+    color: white !important;
+}
+
+a.nav-link:hover {
+    color: #f6c700 !important;
+    text-decoration-line: overline;
+
 }
 
 .navbar-brand img {
@@ -50,5 +86,6 @@ li a {
 @media only screen and (min-width: 900px) {
     .nav-position {
         position: relative;
+        margin: 2rem auto;
     }
 }

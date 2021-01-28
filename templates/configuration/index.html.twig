@@ -1,8 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    {{ parent() }}
 
     <link rel="stylesheet" href="{{ asset('css/stylesAdmin.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
@@ -11,120 +10,124 @@
 {% block title %}Configuration{% endblock %}
 
 {% block body %}
+<div class="container">
+    <main>
 
-    <!-- Titre -->
-    <div class="titrePage">
-        <img src="{{ asset("assets/Logos/TheLazyStreamingHorizontal.png") }}" alt="" width="130">
-        <small>Veuillez compléter les champs avec les informations correspondantes</small>
-        <h1>Configurez votre compte</h1>
-        <div class="barreJaunePetit"></div>
-    </div>
-
-    <!-- Titre de la section Parametres du compte -->
-    <div class="titreSection">
-        <h3>Paramètres du compte</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-tools"
-             viewBox="0 0 22 21">
-            <path
-                    d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z" />
-        </svg>
-    </div>
-
-    <!-- Detail jaune sous le titre -->
-    <div class="barreJaune"></div>
-
-    <!-- Signup Form -->
-    {{ form_start(form, {'attr': {'id': 'form'}}) }}
-
-        {{ form_row(form.firstname) }}
-        {{ form_row(form.lastname) }}
-        {{ form_row(form.pseudo) }}
-        {{ form_row(form.email) }}
-
-        <div>
-            {{ form_label(form.plainPassword.first) }}
-            {{ form_widget(form.plainPassword.first) }}
-            <small>{{ form_help(form.plainPassword) }}</small>
-            {{ form_errors(form.plainPassword.first) }}
+        <!-- Titre -->
+        <div class="titrePage">
+            <img src="{{ asset("assets/Logos/TheLazyStreamingHorizontal.png") }}" alt="" width="130">
+            <small>Veuillez compléter les champs avec les informations correspondantes</small>
+            <h1>Configurez votre compte</h1>
+            <div class="barreJaunePetit"></div>
         </div>
 
-        <div>
-            {{ form_label(form.plainPassword.second) }}
-            {{ form_widget(form.plainPassword.second) }}
-            <small>{{ form_help(form.plainPassword) }}</small>
-            {{ form_errors(form.plainPassword.second) }}
+        <!-- Titre de la section Parametres du compte -->
+        <div class="titreSection">
+            <h3>Paramètres du compte</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-tools"
+                 viewBox="0 0 22 21">
+                <path
+                        d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z" />
+            </svg>
         </div>
 
-        <div class="text-center">
-            <button data-toggle="modal" data-target="#modal-save" type="button" class="btn" id="enregistrer">Enregistrer</button>
+        <!-- Detail jaune sous le titre -->
+        <div class="barreJaune"></div>
+
+        <!-- Signup Form -->
+        {{ form_start(form, {'attr': {'id': 'form'}}) }}
+
+            {{ form_row(form.firstname) }}
+            {{ form_row(form.lastname) }}
+            {{ form_row(form.pseudo) }}
+            {{ form_row(form.email) }}
+
+            <div>
+                {{ form_label(form.plainPassword.first) }}
+                {{ form_widget(form.plainPassword.first) }}
+                <small>{{ form_help(form.plainPassword) }}</small>
+                {{ form_errors(form.plainPassword.first) }}
+            </div>
+
+            <div>
+                {{ form_label(form.plainPassword.second) }}
+                {{ form_widget(form.plainPassword.second) }}
+                <small>{{ form_help(form.plainPassword) }}</small>
+                {{ form_errors(form.plainPassword.second) }}
+            </div>
+
+            <div class="text-center">
+                <button data-toggle="modal" data-target="#modal-save" type="button" class="btn" id="enregistrer">Enregistrer</button>
+            </div>
+
+        {{ form_end(form) }}
+            <!-- Message de confirmation Du formulaire -->
+            <!-- Modal -->
+            <div class="modal fade" id="modal-save" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Enregistrer les modifications du compte</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body confirmation">
+                            <p class="messageConfirmation">Êtes-vous sûr de vouloir enregistrer les modifications ?</p><br>
+                        </div>
+                        <div class="modal-footer blockButton">
+                            <button form="form" type="submit" class="btn" id="acepter3">Oui, Enregistrer</button>
+                            <button type="button" class="btn" id="anuller2" data-dismiss="modal">Non, Annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Titre de la section Suppresion du compte -->
+        <div class="titreSection">
+
+            <h3>Effacer votre compte</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-trash-fill" viewBox="0 0 22 21">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg>
+
         </div>
 
-    {{ form_end(form) }}
-        <!-- Message de confirmation Du formulaire -->
+        <!-- Detail jaune sous le titre -->
+        <div class="barreJaune"></div>
+
+        <!-- Message Suppresion de compte -->
+        <div class="messageConfirmation1">
+
+            <p>Voulez-vouz supprimer votre compte TheLazyStreaming?</p><br>
+            <button data-toggle="modal" data-target="#modal-delete" type="button" class="btn" id="acepter3">Oui, Effacer</button>
+
+        </div>
+
+        <!-- Message de confirmation Suppresion -->
         <!-- Modal -->
-        <div class="modal fade" id="modal-save" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Enregistrer les modifications du compte</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Supprimer votre compte</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body confirmation">
-                        <p class="messageConfirmation">Êtes-vous sûr de vouloir enregistrer les modifications ?</p><br>
+                        <p class="messageConfirmation">Êtes-vous sûr de vouloir supprimer définitivement votre compte ?</p><br>
+                        <p class="messageConfirmation">Attention : cette action est irréversible</p>
                     </div>
                     <div class="modal-footer blockButton">
-                        <button form="form" type="submit" class="btn" id="acepter3">Oui, Enregistrer</button>
+                        <a href="{{ path('user.delete', {'id': app.user.id}) }}" type="button" class="btn" id="acepter2">Oui, Effacer</a>
                         <button type="button" class="btn" id="anuller2" data-dismiss="modal">Non, Annuler</button>
                     </div>
                 </div>
             </div>
         </div>
-
-    <!-- Titre de la section Suppresion du compte -->
-    <div class="titreSection">
-
-        <h3>Effacer votre compte</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#f6c700" class="bi bi-trash-fill" viewBox="0 0 22 21">
-            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-        </svg>
-
-    </div>
-
-    <!-- Detail jaune sous le titre -->
-    <div class="barreJaune"></div>
-
-    <!-- Message Suppresion de compte -->
-    <div class="messageConfirmation1">
-
-        <p>Voulez-vouz supprimer votre compte TheLazyStreaming?</p><br>
-        <button data-toggle="modal" data-target="#modal-delete" type="button" class="btn" id="acepter3">Oui, Effacer</button>
-
-    </div>
-
-    <!-- Message de confirmation Suppresion -->
-    <!-- Modal -->
-    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Supprimer votre compte</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body confirmation">
-                    <p class="messageConfirmation">Êtes-vous sûr de vouloir supprimer définitivement votre compte ?</p><br>
-                    <p class="messageConfirmation">Attention : cette action est irréversible</p>
-                </div>
-                <div class="modal-footer blockButton">
-                    <a href="{{ path('user.delete', {'id': app.user.id}) }}" type="button" class="btn" id="acepter2">Oui, Effacer</a>
-                    <button type="button" class="btn" id="anuller2" data-dismiss="modal">Non, Annuler</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
+</div>
 {% endblock %}
 
 {% block javascripts %}

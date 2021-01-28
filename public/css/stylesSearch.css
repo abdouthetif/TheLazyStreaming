@@ -5,7 +5,7 @@
 
     .container {
         width: 100%;
-        margin: 10% auto;
+        margin: auto;
         
     }
 
@@ -212,7 +212,7 @@
 
     .container {
         width: 75%;
-        margin: 1rem auto;
+        margin: auto;
         
     }
 
@@ -293,11 +293,6 @@
 
     }
 
-
-
-
-
-
     /*Erreur 404 (Page 404) */
 
     div._404{
@@ -320,7 +315,7 @@
     /*Formulaire*/
 
     form {
-        width: 50%;
+        width: 75%;
         margin: auto;
     }
 
@@ -438,7 +433,7 @@
 
     .container {
         width: 50%;
-        margin: 1rem auto;
+        margin: auto;
         
     }
 
@@ -455,7 +450,6 @@
         padding: 0;
     }
 
-    small,
     small p {
         display: block;
         color: rgba(255, 255, 255, 0.5);
@@ -465,6 +459,8 @@
     /*Logo Principal (Page Login)*/
 
     .logo {
+        width: 20%;
+        margin: auto;
         text-align: center !important;
     }
 
@@ -478,7 +474,7 @@
 
     .titrePage {
         text-align: center;
-        margin: 0 0 1rem 0;
+        margin: auto;
     }
 
     .barreJaune {
@@ -494,11 +490,11 @@
         width: 75%;
         margin: 3.5rem auto;
         text-align: jucenterstify;
-    
     }
 
     hr {
-        margin: 0.5rem;
+        margin: 0.4rem;
+        background-color: white;
     }
 
     select#get_search_genre {
@@ -521,25 +517,15 @@
         color: black;
     }
 
-
     input#film {
         margin: 0;
         text-align: start;
-
     }
-
     input#serie
      {
         margin: 0;
         text-align: start;
-
     }
-
-
-
-
-
-
     /*Erreur 404 (Page 404) */
 
     div._404{
@@ -592,10 +578,6 @@
         font-size: 0.8rem;
     }
 
-    form div {
-        padding: 0.3rem;
-    }
-
     form div:last-of-type {
         text-align: center;
     }
@@ -625,9 +607,26 @@
         color: #F6C700 !important;
     }
 
-    .col {
+    div.col-4 {
         display: flex;
         justify-content: space-between;
+    }
+
+    /* Smalls*/
+
+    p#get_search_genre_help {
+        margin: 0;
+    }
+    p#get_search_rating_help{
+        margin: 0;
+    }
+
+    p#get_search_year_help{
+        margin: 0;
+    }
+
+    p#get_search_keyword_help{
+        margin: 0;
     }
 
     input #film {

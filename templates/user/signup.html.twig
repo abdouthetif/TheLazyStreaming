@@ -1,46 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Inscrivez-vous !{% endblock %}
+{%  block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
 
 {% block body %}
-    <!-- Title -->
-    <div class="titrePage">
+    <div class="container">
+        <main>
+            <!-- Title -->
+            <div class="titrePage">
 
-        <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="" width="130">
+                <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="" width="130">
 
-        <small>Veuillez compléter les champs avec les informations correspondantes</small>
-        <h1>Créez votre compte</h1>
-        <div class="barreJaune"></div>
+                <small>Veuillez compléter les champs avec les informations correspondantes</small>
+                <h1>Créez votre compte</h1>
+                <div class="barreJaune"></div>
 
+            </div>
+
+            <!-- Signup Form -->
+            {{ form_start(form) }}
+
+            {{ form_row(form.firstname) }}
+            {{ form_row(form.lastname) }}
+            {{ form_row(form.pseudo) }}
+            {{ form_row(form.email) }}
+
+            <div>
+                {{ form_label(form.plainPassword.first) }}
+                {{ form_widget(form.plainPassword.first) }}
+                <small>{{ form_help(form.plainPassword) }}</small>
+                {{ form_errors(form.plainPassword.first) }}
+            </div>
+
+            <div>
+                {{ form_label(form.plainPassword.second) }}
+                {{ form_widget(form.plainPassword.second) }}
+                <small>{{ form_help(form.plainPassword) }}</small>
+                {{ form_errors(form.plainPassword.second) }}
+            </div>
+
+            <div>
+                <button type="submit" class="btn" id="enregistrer">Enregistrer</button>
+            </div>
+            {{ form_end(form) }}
+
+            <!-- Login link -->
+            <a href="{{ path('security.login') }}">Vous avez déja un compte ? Connectez-vous</a>
+        </main>
     </div>
-
-    <!-- Signup Form -->
-    {{ form_start(form) }}
-
-        {{ form_row(form.firstname) }}
-        {{ form_row(form.lastname) }}
-        {{ form_row(form.pseudo) }}
-        {{ form_row(form.email) }}
-
-        <div>
-            {{ form_label(form.plainPassword.first) }}
-            {{ form_widget(form.plainPassword.first) }}
-            <small>{{ form_help(form.plainPassword) }}</small>
-            {{ form_errors(form.plainPassword.first) }}
-        </div>
-
-        <div>
-            {{ form_label(form.plainPassword.second) }}
-            {{ form_widget(form.plainPassword.second) }}
-            <small>{{ form_help(form.plainPassword) }}</small>
-            {{ form_errors(form.plainPassword.second) }}
-        </div>
-
-        <div>
-            <button type="submit" class="btn" id="enregistrer">Enregistrer</button>
-        </div>
-    {{ form_end(form) }}
-
-    <!-- Login link -->
-    <a href="{{ path('security.login') }}">Vous avez déja un compte ? Connectez-vous</a>
 {% endblock %}

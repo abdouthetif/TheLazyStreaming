@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page non trouvée{% endblock %}
+
+{%  block stylesheets %}
+    {{ parent() }}
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <!------------------------------------- MAIN ------------------------------------------->
+        <main>
+
+            <div class="_404">
+
+                <!-- Logo TheLazyStreaming -->
+                <img src="{{ asset('assets/Logos/TheLazyStreaming.png') }}" alt="Logo TheLazyStreaming" width="200">
+
+                <!-- Erreur 404 -->
+                <p>Erreur 404 <br> <small>Page non trouvée</small></p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+{% endblock %}

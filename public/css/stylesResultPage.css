@@ -4,7 +4,7 @@
 
 .container {
     width: 90%;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 * {
@@ -414,7 +414,7 @@ footer p {
 
 .container {
     width: 90%;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 * {
@@ -816,7 +816,7 @@ footer p {
 
 .container {
     width: 95%;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 * {
@@ -857,7 +857,6 @@ h2 {
 }
 
 small {
-    display: block;
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.5rem;
 }
@@ -935,7 +934,7 @@ div.affiche {
 
 #relancer:hover {
     background-color: transparent;
-    margin: auto 0.2rem;
+    margin: 1rem 0.2rem;
     padding: 0.8rem 1.8rem;
     border-radius: 10px;
     font-size: 0.75rem;
@@ -968,7 +967,7 @@ div.row {
     margin: auto;
 }
 
-div.col {
+div.col-4 {
     align-items: center;
     justify-content: center;
 }
@@ -1159,12 +1158,11 @@ form a {
 
 /*Voir, Editer, Supprimer*/
 div.row.carreBlanc {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
 a {
-
     text-decoration: none;
 }
 
